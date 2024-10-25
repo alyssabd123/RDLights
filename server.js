@@ -2,20 +2,21 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose') //require mongoose package
+const productRoutes= require('./routes/productDescriptions')
 
 //express app
 const app=express()
 
 //MIDDLEWARE
+app.use(express.json())
+
 app.use((req,res,next) =>{
     console.log(req.path, req.method) //log requests coming in to console
     next()
 })
 
-//request object and response object to send backt to browser
-app.get('/', (req,res) =>{
-    res.json({mssg: 'Welcome'})
-})
+//routes
+app.use('/api/descriptions',productRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
@@ -27,10 +28,9 @@ mongoose.connect(process.env.MONGO_URI)
     })
 
 //listen on port for requests
-app.listen(process.env.PORT, () =>{
+app.listen(process.env.PORT, async () =>{
     console.log('listening on port 4000!')
+    // // Dynamically import the 'open' module
+    // const open = (await import('open')).default;
+    // await open(`http://localhost:${process.env.PORT}`);
 })
-
-
-// e9bWkcIhAtDiUMaK mongo password 1
-//g4oIGq8qhC6y9NDL pass 2

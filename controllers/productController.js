@@ -12,9 +12,9 @@ const getDescriptions = async(req,res) => {
 const getDescription = async(req,res) => {
     const {name} = req.params
 
-    if(!mongoose.Types.ObjectId.isValid(name)){
-        return res.status(404).json({error: 'No such descriptions'})
-    }
+    // if(!mongoose.Types.ObjectId.isValid(name)){
+    //     return res.status(404).json({error: 'No such descriptions'})
+    // }
 
     const description = await Description.findOne({name: name})
 

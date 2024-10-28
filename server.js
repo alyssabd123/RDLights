@@ -21,7 +21,7 @@ app.use('/api/descriptions',productRoutes)
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>{ //after connected to db
-        console.log('MongoDB connected!')
+        console.log('MongoDB connected!') //hi
     })
     .catch((error) =>{
         console.log(error)

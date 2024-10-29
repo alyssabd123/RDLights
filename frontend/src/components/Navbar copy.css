@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@320&display=swap');
+
 /* Navbar Styles */
 .navbar {
     display: flex;
@@ -5,23 +7,35 @@
     justify-content: space-between;
     background-color: #2D3194; /* Dark background color */
     color: #fff; /* White text color */
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .navbar-links {
     display: flex;
     align-items: center;
+    margin: 0 2rem;
     list-style-type: none;
+    position: relative;
+    left: -70px; /* Adjust to move it to the left */
 }
 
 .navbar-links img {
-    width: 100px; /* Example width */
+    width: 150px; /* Example width */
     height: auto;
 }
 
 .navbar-link {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0 2rem;
+    font-size: 1.7rem;
+    display: inline-block;
+}
+
+.navbar-link-contact {
+    color: #2D3194;
+    text-decoration: none;
+    margin: .25rem 1rem;
     font-size: 1.5rem;
     display: inline-block;
 }
@@ -32,11 +46,12 @@
 
 .contact-button {
     background-color: #FFD401; /* Orange button color */
-    color: #333; /* Text color for button */
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
+    position: relative;
+    left: -30px; /* Adjust to move it to the left */
 }
 
 .contact-button:hover {

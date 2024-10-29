@@ -14,7 +14,7 @@ const Navbar = () => {
                 <li><Link to="/wall-racks" className="navbar-link">Wall Racks</Link></li>
             </ul>
             <button className="contact-button">
-                <Link to="/contact" className="navbar-link">
+                <Link to="/contact" className="navbar-link-contact">
                     Contact Us
                 </Link>
             </button>

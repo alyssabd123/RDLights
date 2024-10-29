@@ -1,4 +1,4 @@
-const Description = require('../../models/description')
+const Description = require('../models/description')
 const mongoose = require('mongoose')
 
 //get all descriptions

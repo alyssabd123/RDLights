@@ -32,6 +32,7 @@ code {
   font-family: "Times New Roman", Times, serif;
   font-size: 2rem;
   margin: 0;
+  color: white; /* Or your preferred color */
 }
 
 .logo {
@@ -39,8 +40,21 @@ code {
   height: auto;
 }
 
-
 .navbarLeft{
   display: flex;
   align-items: left;
+}
+
+.navbarRight{
+  display:flex;
+  text-align: right;
+  border: 2px solid ;
+  color: #FFD401; 
+  padding: 3px 20px;   
+  border-radius: 40px; 
+}
+
+.navbar-link {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Optional: Set your link color */
 }

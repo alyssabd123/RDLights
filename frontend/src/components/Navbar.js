@@ -6,30 +6,34 @@ const Navbar = () => {
     return (
         <header className ="navbar">
             <div className ="navbarLeft">
-            <div className="container">
-                <img src={logo} alt="RD Lights Logo" className="logo" />
+                <div className="container">
+                    <Link to="/">
+                    <img src={logo} alt="RD Lights Logo" className="logo"/>
+                    </Link>
+                </div>
+                <div className="container">
+                    <Link to ="/" className="navbar-link">
+                        <h1>Home</h1>
+                    </Link>
+                </div>
+                <div className="container">
+                    <Link to ="/" className="navbar-link">
+                        <h1>Pool Lights</h1>
+                    </Link>
+                </div>
+                <div className="container">
+                    <Link to ="/" className="navbar-link">
+                        <h1>Wall Racks</h1>
+                    </Link>
+                </div>
             </div>
-            <div className="container">
-                <Link to ="/">
-                    <h1>Home</h1>
-                </Link>
-            </div>
-            <div className="container">
-                <Link to ="/">
-                    <h1>Pool Lights</h1>
-                </Link>
-            </div>
-            <div className="container">
-                <Link to ="/">
-                    <h1>Wall Racks</h1>
-                </Link>
-            </div>
-            </div>
-            <div className="container">
-                <Link to ="/">
+
+            {/* Right Side */}
+            <div className="navbarRight">
+                <Link to ="/" className="navbar-link">
                     <h1>Contact Us</h1>
                 </Link>
-            </div>
+            </div> 
         </header>
     )
 }

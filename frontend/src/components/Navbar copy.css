@@ -1,0 +1,44 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2D3194; /* Dark background color */
+    color: #fff; /* White text color */
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar-links img {
+    width: 100px; /* Example width */
+    height: auto;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.navbar-link:hover {
+    color: #FFD401; /* Hover effect color */
+}
+
+.contact-button {
+    background-color: #FFD401; /* Orange button color */
+    color: #333; /* Text color for button */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #ffd50195; /* Darker orange on hover */
+}

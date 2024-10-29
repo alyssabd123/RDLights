@@ -2,7 +2,8 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose') //require mongoose package
-const productRoutes= require('../routes/productDescriptions')
+const productRoutes= require('./routes/productDescriptions')
+
 
 //express app
 const app=express()

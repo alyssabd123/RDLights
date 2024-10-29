@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Navigation bar css*/
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2D3194; /* Optional background color */
+  padding: 10px 0;
+}
+
+/*Each container*/
+.container {
+  flex: 1;
+  text-align: center;
+}
+
+/*Each container as header1 */
+.container h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+
+.navbarLeft{
+  display: flex;
+  align-items: left;
+}

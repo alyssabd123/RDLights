@@ -1,50 +1,106 @@
 
-body {
+.home-page {
     min-height: 100vh;
     background-image: linear-gradient(rgba(255, 212, 1, 0.45), rgba(255, 212, 1, 0.2)),
     url('../images/RDLightsImage2.png');
-    background-size: cover;      
-    background-position: center; 
+    background-size: 100% 50%;      
     background-repeat: no-repeat; 
-    background-position: center -30%; /* Moves the image down by 20% */
+    background-position: center -1%; /* Moves the image down by 20% */
 
     margin: 0;                
     font-family: "Josefin Sans", sans-serif; 
     overflow-y: auto; /* Ensures vertical scroll if content exceeds viewport */
 }
 
-.homepage {
-
+.homepageRight {
     color: #2D3194; /* Adjust text color if needed for readability */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
-    min-height: 100vh;
+    min-height: 95vh;
     width: 30vw;          /* Adjust width to control horizontal coverage */
     margin-left: auto;    /* Aligns it to the right */
     flex-direction: column;
     justify-content: center; 
 }
 
+.homepageRight h1{
+    font-size: 5rem !important;
+    font-family: "Elephant", Serif;
+}
+
+.homepageRight p{
+    font-size: 1.5rem;
+}
+
 .split-section{
+    margin-top: -200px;
     display: flex;
     justify-content: space-between; /* Adds space between left and right boxes */
     align-items: stretch;
-    height: 70vh; /* Adjust height as needed */
+    height: 50vh; /* Adjust height as needed */
 }
 
 .Lcontent-section{
     flex: 1;
     background-color: #FFD401;
+    background-image: url('../images/RDLightsImage2.png');
+    background-size: 80%;  
+    background-repeat: no-repeat; 
+    background-position: center;
 }
 
 .Rcontent-section{
-    flex: 1.5;
+    flex: 2;
     background-color: white;
-    text-align: center;
+    display: flex;                /* Makes right-box a flex container */
+    justify-content: center;      /* Centers content horizontally */
+    align-items: center;          /* Centers content vertically */
+    text-align: center;           /* Center-aligns the text inside */
 }
 
+.third-section{
+    background-color: #2D3194;
+    height: 55vh;
+    text-align: center;
+    color: white;
+    
+}
 
+.homepageRight button{
+    width: 5rem;
+    height: 5rem;
+    border: solid #2D3194;
+    border-width: 0 7.5px 7.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
 
+.Lcontent-section2{
+    flex: 1;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
 
+.Rcontent-section2{
+    flex: 2;
+    background-color: rgb(0, 0, 0);
+    display: flex;                /* Makes right-box a flex container */
+    justify-content: center;      /* Centers content horizontally */
+    align-items: center;          /* Centers content vertically */
+    text-align: center;           /* Center-aligns the text inside */
+    color: white;
+    background-image: url('../images/RDLightsImage2.png');
+}
+
+.split-section2{
+    margin-top: -200px;
+    display: flex;
+    justify-content: space-between; /* Adds space between left and right boxes */
+    align-items: stretch;
+    height: 65vh; /* Adjust height as needed */
+}
 

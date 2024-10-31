@@ -6,13 +6,15 @@ body {
     background-size: cover;      
     background-position: center; 
     background-repeat: no-repeat; 
-    margin: 0;                   
-    font-family: "Josefin Sans", sans-serif; 
     background-position: center -30%; /* Moves the image down by 20% */
+
+    margin: 0;                
+    font-family: "Josefin Sans", sans-serif; 
     overflow-y: auto; /* Ensures vertical scroll if content exceeds viewport */
 }
 
 .homepage {
+
     color: #2D3194; /* Adjust text color if needed for readability */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -22,6 +24,24 @@ body {
     margin-left: auto;    /* Aligns it to the right */
     flex-direction: column;
     justify-content: center; 
+}
+
+.split-section{
+    display: flex;
+    justify-content: space-between; /* Adds space between left and right boxes */
+    align-items: stretch;
+    height: 70vh; /* Adjust height as needed */
+}
+
+.Lcontent-section{
+    flex: 1;
+    background-color: #FFD401;
+}
+
+.Rcontent-section{
+    flex: 1.5;
+    background-color: white;
+    text-align: center;
 }
 
 

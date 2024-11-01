@@ -1,4 +1,3 @@
-
 /* Container to center the form vertically and horizontally */
 .contact-container {
     display: flex;
@@ -18,6 +17,17 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
+    border-radius: 5%;
+    margin-top: -8rem;
+    margin-right: -5rem;
+}
+
+.contact-container h1{
+    font-size: 5.5rem !important;
+    margin-right: 13rem;
+    margin-top: -21rem;
+    font-family: "Elephant", Serif;
+    color: #2D3194;
 }
 
 /* Styling for form elements */
@@ -39,7 +49,7 @@
 
 .form-container button {
     padding: 0.7rem 1.5rem;
-    background-color: #333;
+    background-color: #2D3194;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -49,4 +59,30 @@
 
 .form-container button:hover {
     background-color: #555; /* Change color on hover */
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem; /* Adds space between fields */
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    flex: 1; /* Ensures both inputs are the same width */
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-container h1{
+    font-size: 3rem;
+    font-family: "Elephant", Serif;
+    margin-bottom: 1rem;
+
 }

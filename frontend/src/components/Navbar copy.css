@@ -25,6 +25,11 @@
     height: auto;
 }
 
+.navbar-link.active {
+    text-decoration: underline; /* Underline the active link */
+    font-weight: bold;          /* Optional: Make active link bold */
+}
+
 .navbar-link {
     color: #fff;
     text-decoration: none;

@@ -3,22 +3,18 @@ const mongoose = require('mongoose')
 
 //get all descriptions
 const getDescriptions = async(req,res) => {
-    const descriptions= await Description.find({}) //get all leave {} blank, desending order
+    const data = await Description.find({}) //get all leave {} blank, desending order
 
-    res.status(200).json(descriptions)
+    res.status(200).json(data)
 }
 
 //get a single description
 const getDescription = async(req,res) => {
-    const name = req.params.names;
+    const name = req.params.name
 
-    const description = await Description.findOne({name: name});
+    const data = await Description.findOne({name: name})
 
-    if(!description) {
-        return res.status(404).json({error: 'No such description'})
-    }
-
-    res.status(200).json(description)
+    res.status(200).json(data)
 }
 
 //update a descriptions

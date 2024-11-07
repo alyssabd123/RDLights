@@ -22,7 +22,7 @@ const Home = () => {
                 <p>Custom Pool Lights</p>
                 <p>Handmade Wall Racks</p>
                 {/* Button to trigger scroll */}
-                <button class="button arrow-button" onClick={scrollToSplitSection}></button>
+                <button className="button arrow-button" onClick={scrollToSplitSection}></button>
             </div>
             {/* Target section with an id */}
             <div id="split-section" className="split-section">

@@ -4,6 +4,7 @@ const nodemailer = require('nodemailer')
 const express = require('express')
 const mongoose = require('mongoose') //require mongoose package
 const productRoutes = require('./routes/productDescriptions')
+const contactRoutes = require('./routes/contactUs')
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -26,6 +27,7 @@ app.use((req,res,next) =>{
 
 //routes
 app.use('/api/descriptions',productRoutes)
+app.use('/api/contactUs', contactRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONGO_URI)

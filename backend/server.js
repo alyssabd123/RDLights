@@ -1,8 +1,16 @@
 require('dotenv').config()
+const nodemailer = require('nodemailer')
 
 const express = require('express')
 const mongoose = require('mongoose') //require mongoose package
-const productRoutes= require('./routes/productDescriptions')
+const productRoutes = require('./routes/productDescriptions')
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
 
 
 //express app

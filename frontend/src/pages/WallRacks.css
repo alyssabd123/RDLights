@@ -1,0 +1,28 @@
+.split-section{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between; /* Adds space between left and right boxes */
+    align-items: stretch;
+    height: 50vh; /* Adjust height as needed */
+}
+
+.racksRight {
+    color: #2D3194; /* Adjust text color if needed for readability */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    min-height: 95vh;
+    width: 45vw;          /* Adjust width to control horizontal coverage */
+    margin-left: auto;    /* Aligns it to the right */
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.racksRight h1{
+    font-size: 100px;
+    background-color: #FFD401;
+}
+
+.racksRight p{
+    font-size: 30px;
+}

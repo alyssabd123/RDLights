@@ -1,48 +1,19 @@
 // Contact.js
 import React from 'react';
 import './Contact.css'; // Import the CSS file
-import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const sendEmail = (e) => {
+        alert('Email Submitted');
 
-    // new
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        message: ''
-    });
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch('/api/contactUs/send-email', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
-            if (response.ok) {
-                alert('Email sent successfully');
-            } else {
-                alert('Failed to send email');
-            }
-        } catch (error) {
-            console.error(error);
-            alert('Error sending email');
-        }
-    };
-    // new end
-
+        emailjs.sendForm('service_njhyou6', 'template_0xpipz5', e.target, 'jwjW30JbYnaZ7shfV')
+    }
     return (
-        /*<div className="contact-container">
+        <div className="contact-container">
             <h1>Contact Us</h1>
             <div className="form-container">
-                <form action="/submit" method="POST">
+                <form onSubmit={sendEmail}>
                     <div className="form-group">
                         <label>
                             First Name*:
@@ -72,41 +43,6 @@ const Contact = () => {
             </div>
         </div>
     );
-};*/
-        <div className="contact-container">
-            <h1>Contact Us</h1>
-            <div className="form-container">
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label>
-                            First Name*:
-                            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-                        </label>
-                        <label>
-                            Last Name*:
-                            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-                        </label>
-                    </div>
-                    <div className="form-group">
-                        <label>
-                            Email*:
-                            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-                        </label>
-                        <label>
-                            Phone Number:
-                            <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
-                        </label>
-                    </div>
-                    <label>
-                        What can we help with?*:
-                        <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
-                    </label>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    );
 };
-
 
 export default Contact;

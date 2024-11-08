@@ -4,26 +4,30 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact'
 import AdminLogin from './pages/AdminLogin'
-import LayoutWithNavbar from './LayoutWithNavbar'
-import LayoutWithoutNavbar from './LayoutWithoutNavbar'
 import PoolLights from './pages/PoolLights'
 import WallRacks from './pages/WallRacks'
+import LayoutWithNavbar from './LayoutWithNavbar'
+import LayoutWithoutNavbar from './LayoutWithoutNavbar'
 import DescriptionForm from './components/DescriptionForm'
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-          <div className = "pages">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/admin-login" element={<AdminLogin />} />
-            </Routes>
-          </div>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Routes with Navbar */}
+        <Route element={<LayoutWithNavbar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/pool-lights" element={<PoolLights />} />
+          <Route path="wall-racks" element={<WallRacks />} />
+        </Route>
+        
+        {/* Route without Navbar */}
+        <Route element={<LayoutWithoutNavbar />}>
+          <Route path="/admin-login" element={<AdminLogin />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

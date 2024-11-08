@@ -5,8 +5,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const sendEmail = (e) => {
-        e.preventDefault();
-        alert('Submitted');
+        alert('Email Submitted');
 
         emailjs.sendForm('service_njhyou6', 'template_0xpipz5', e.target, 'jwjW30JbYnaZ7shfV')
     }

@@ -1,0 +1,35 @@
+.pool-lights-page {
+    width: 100%;                    /* Ensures the page container spans full width */
+    display: flex;                  /* Allows for flexibility in layout adjustments */
+    justify-content: center;        /* Centers the main split-section horizontally */              
+}
+
+.split-section {
+    display: flex;
+    justify-content: space-between; /* Adds space between left and right sections */
+    align-items: stretch;           /* Makes both sections stretch to the full height */
+    height: 200vh;                   /* Adjust height as needed */
+    width: 100%;                    /* Ensures it spans full width */
+    margin-top: -300px;             /* Adjusts vertical positioning */
+}
+
+.lightsLeft {
+    flex: 1;                        /* Makes left section flexible */
+    display: flex;                  /* Flex container for centering */
+    justify-content: center;        /* Centers content horizontally */
+    align-items: center;            /* Centers content vertically */
+    background-color: white;    /* Optional: background color for visibility */
+    text-align: center;             /* Center-aligns text inside */
+    padding: 10px;                 /* Optional padding for spacing */
+    flex-direction: column;       /*Makes each text in column*/        
+}
+
+.lightsRight{
+    flex: 1;                        /* Makes right section take up more space */
+    background-color: white;        /* Background color for visibility */
+    display: flex;                  /* Flex container for centering */
+    justify-content: center;        /* Centers content horizontally */
+    align-items: center;            /* Centers content vertically */
+    text-align: center;             /* Center-aligns text inside */
+    padding: 10px;                  /* Optional padding for spacing */
+}

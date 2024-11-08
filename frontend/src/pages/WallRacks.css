@@ -1,5 +1,5 @@
 .split-section{
-    margin-top: 70px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between; /* Adds space between left and right boxes */
     align-items: stretch;
@@ -9,11 +9,9 @@
 .racksRight {
     color: #2D3194; /* Adjust text color if needed for readability */
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
     min-height: 95vh;
     width: 45vw;          /* Adjust width to control horizontal coverage */
-    margin-left: auto;    /* Aligns it to the right */
+    margin-right: 100px;    /* Aligns it to the right */
     flex-direction: column;
     justify-content: center; 
 }
@@ -25,4 +23,80 @@
 
 .racksRight p{
     font-size: 30px;
+}
+
+.racksLeft{
+    flex: 1;
+    background-image: url('../images/RDLightsImage2.png');
+    background-size: 80%;  
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.bar h1{
+    font-size: 80px;
+    background-color: #FFD401;
+    color: #2D3194;
+    text-align: center;
+    margin-top: 190px;
+    margin-bottom: 0px;
+}
+
+.racksRight button{
+    width: 5rem;
+    height: 5rem;
+    border: solid #2D3194;
+    border-width: 0 7.5px 7.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 10%;
+}
+
+.racksRight button:hover{
+    width: 5rem;
+    height: 5rem;
+    border: solid #FFD401;
+    border-width: 0 7.5px 7.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 10%;
+    transition: 0.15s;
+}
+
+.visual{
+    margin-top: 0px;
+    display: flex;
+    height: 50vh; /* Adjust height as needed */
+}
+
+.middle{
+    width:43.5%
+}
+
+.left{
+    width: 100%;
+}
+
+.left h1{
+    font-size: 100px;
+    text-align: center;
+}
+
+.left p{
+    font-size: 100px;
+    text-align: center;
+}
+
+.right h1{
+    font-size: 50px;
+}
+
+.right{
+    width: 50%;
 }

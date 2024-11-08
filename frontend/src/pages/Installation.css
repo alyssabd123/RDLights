@@ -1,0 +1,28 @@
+.installationTop{
+    flex: 1; 
+    flex-direction: column;
+    color:#2D3194;
+}
+
+.installationTop h1{
+    font-size: 80px;
+    background-color: #FFD401;
+    color: #2D3194;
+    text-align: center;
+}
+
+.installationTop p{
+    font-size: 30px;
+    text-align: left;
+}
+
+.installationBottom h1{
+    font-size: 80px;
+    background-color: #FFD401;
+    color: #2D3194;
+    text-align: center;
+}
+
+.installationBottom{
+    color:#2D3194;
+}

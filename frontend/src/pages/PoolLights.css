@@ -1,7 +1,7 @@
 .pool-lights-page {
     width: 100%;                    /* Ensures the page container spans full width */
     display: flex;                  /* Allows for flexibility in layout adjustments */
-    justify-content: center;        /* Centers the main split-section horizontally */              
+    justify-content: center;        /* Centers the main split-section horizontally */     
 }
 
 .split-section {
@@ -24,6 +24,29 @@
     flex-direction: column;       /*Makes each text in column*/        
 }
 
+#headera{
+    font-size: 80px;
+    background-color: #FFD401;
+    color: #2D3194;
+    text-align: center;
+    min-width: 800px;
+    line-height: -500; /* Adjust line height for text block height */
+    padding: 5px 0; /* Minimal padding to reduce the background height */
+
+    display: flex;
+    align-items: center;     /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+
+    margin-top: 150px; /* Adjust value to move the element down */
+}
+
+.lightsLeft p{
+    font-size: 10px;
+    color: #2D3194;
+    text-align: center;
+    margin: 0;
+}
+
 .lightsRight{
     flex: 1;                        /* Makes right section take up more space */
     background-color: white;        /* Background color for visibility */
@@ -32,4 +55,15 @@
     align-items: center;            /* Centers content vertically */
     text-align: center;             /* Center-aligns text inside */
     padding: 10px;                  /* Optional padding for spacing */
+    background-image:  url('../images/RDLightsImage2.png');
 }
+
+.lightsLeft p{
+    font-size: 30px;
+}
+
+.lightsLeft h1{
+    font-size: 100px;
+}
+
+

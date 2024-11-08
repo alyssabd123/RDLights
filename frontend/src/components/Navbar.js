@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../images/RDLightsLogo.png'; 
-import './Navbar copy.css';
+import './Navbar.css';
 
 const Navbar = () => {
     return (

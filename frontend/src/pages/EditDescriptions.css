@@ -1,3 +1,31 @@
-.Edit-Website h1{
-    text-align: center;
+
+.Edit-Website {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+   background-color: #2d3194;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    width: 60%;
+    border-radius: 40px;
+
+    background-color: #ffffff;
+}
+
+.back-button {
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 20px 10px;
+    border-radius:40px;
+    background-color:#ffffff;
 }

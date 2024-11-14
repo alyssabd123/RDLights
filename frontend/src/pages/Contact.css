@@ -26,7 +26,7 @@
     font-size: 5.5rem !important;
     margin-right: 13rem;
     margin-top: -21rem;
-    font-family: "Elephant", Serif;
+    font-family: "Elephant" !important;
     color: #2D3194;
 }
 
@@ -82,7 +82,7 @@ textarea {
 
 .contact-container h1{
     font-size: 3rem;
-    font-family: "Elephant", Serif;
+    font-family: "Elephant" !important;
     margin-bottom: 1rem;
 
 }

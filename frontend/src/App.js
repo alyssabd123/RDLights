@@ -10,7 +10,6 @@ import Installation from './pages/Installation'
 
 import LayoutWithNavbar from './LayoutWithNavbar'
 import LayoutWithoutNavbar from './LayoutWithoutNavbar'
-import DescriptionForm from './components/DescriptionForm'
 import EditDescriptions from './pages/EditDescriptions';
 
 function App() {

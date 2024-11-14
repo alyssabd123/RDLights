@@ -1,3 +1,8 @@
+/* Ensure the Elephant font is applied to everything text-wise */
+* {
+    font-family: "Elephant" !important;
+}
+
 
 .home-page {
     min-height: 100vh;

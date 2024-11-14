@@ -1,6 +1,4 @@
 import './WallRacks.css'
-import 'w3-css/w3.css'
-
 
 const WallRacks = () => {
 
@@ -33,15 +31,28 @@ const WallRacks = () => {
                 <h1>PRICING</h1>
             </div>
             <div className="visual" id="visual" class="w3-cell-row">
-                <div className = 'left' class="w3-container w3-cell">
+                <div className = 'left' >
                     <h1>Base Price*</h1>
-                    <p>4 Cues: $150</p>
+                    <p><b>4 Cues:</b> $150</p>
+                    <p><b>6 Cues:</b> $200</p>
+                    <p><b>8 Cues:</b> $250</p>
+
+                    <p>*Does not include cost of installation</p>
+                    
                 </div>
-                <div className = 'middle' class="w3-container w3-cell">
-                    <img className = 'middle' src = 'https://i.imgur.com/GeaqXkp.png'/>
+                <div className = 'middle' >
+                    <img className = 'middle' src= 'https://i.imgur.com/GeaqXkp.png' alt='graph'/>
                 </div>
-                <div className = 'right' class="w3-container w3-cell">
+                <div className = 'right' >
                     <h1>Customizing</h1>
+                    <p><b>Pool Ball Holder</b></p>
+                    <p>extra $75</p>
+
+                    <p><b>Rack Color</b></p>
+                    <p>No extra cost</p>
+
+                    <p><b>Rack Detailing</b></p>
+                    <p>Price depends on design complexity</p>
                 </div>
             </div>
         </div>

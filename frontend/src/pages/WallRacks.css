@@ -69,34 +69,49 @@
     transition: 0.15s;
 }
 
-.visual{
-    margin-top: 0px;
+.visual {
     display: flex;
-    height: 50vh; /* Adjust height as needed */
+    justify-content: space-between; /* Space out the three sections evenly */
+    align-items: center; /* Ensure horizontal alignment along the center */
+    height: 80vh; /* Height adjustment for uniform vertical sizing */
+    padding: 0 8vw; /* Add side padding for balanced spacing on edges */
 }
 
-.middle{
-    width:43.5%
-}
-
-.left{
-    width: 100%;
-}
-
-.left h1{
-    font-size: 100px;
+.left, .middle, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content vertically at the top of each section */
+    align-items: center; /* Center align content horizontally within the section */
     text-align: center;
 }
 
-.left p{
-    font-size: 100px;
-    text-align: center;
+.left {
+    width: 30%; /* Width for the left section */
+    padding-right: 2vw; /* Spacing between left and middle */
 }
 
-.right h1{
-    font-size: 50px;
+.left h1, .right h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.right{
-    width: 50%;
+.left p, .right p {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+.middle {
+    width: 22%; /* Width for the middle section */
+}
+
+.middle img {
+    width: 100%; /* Fill the section horizontally */
+    max-height: 60vh; /* Prevent image overflow */
+    object-fit: contain;
+}
+
+.right {
+    width: 30%; /* Width for the right section */
+    padding-left: 2vw; /* Spacing between middle and right */
 }

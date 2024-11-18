@@ -1,8 +1,4 @@
-.pool-lights-page {
-    width: 100%;                    /* Ensures the page container spans full width */
-    display: flex;                  /* Allows for flexibility in layout adjustments */
-    justify-content: center;        /* Centers the main split-section horizontally */     
-}
+ 
 
 .split-section {
     display: flex;
@@ -22,6 +18,32 @@
     text-align: center;             /* Center-aligns text inside */
     padding: 10px;                 /* Optional padding for spacing */
     flex-direction: column;       /*Makes each text in column*/        
+}
+
+.lightsRight button{
+    width: 5rem;
+    height: 5rem;
+    border: solid #2D3194;
+    border-width: 0 7.5px 7.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 35rem;
+}
+
+.lightsRight button:hover{
+    width: 5rem;
+    height: 5rem;
+    border: solid #FFD401;
+    border-width: 0 7.5px 7.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.15s;
 }
 
 #headera{
@@ -66,4 +88,65 @@
     font-size: 100px;
 }
 
+.bar h1{
+    font-size: 80px;
+    background-color: #FFD401;
+    color: #2D3194;
+    text-align: center;
+    margin-top: 190px;
+    margin-bottom: 0px;
+}
+
+.visual {
+    display: flex;
+    justify-content: space-between; /* Space out the three sections evenly */
+    align-items: flex-start; /* Ensure horizontal alignment along the center */
+    height: 80vh; /* Height adjustment for uniform vertical sizing */
+}
+
+.visual .left, .visual .middle, .visual .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content vertically at the top of each section */
+    align-items: center; /* Center align content horizontally within the section */
+    text-align: center;
+    padding: 0;
+}
+
+.left, .right{
+    width: 25%; /* Adjust width for more spacing */
+}
+
+.left h1, .right h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #2D3194
+}
+
+.left p{
+    font-size: 2.5rem;
+    line-height: 2rem;
+    margin: 0;
+    padding: 35px;
+    color: #2D3194
+}
+
+.right p {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.middle {
+    width: 100%; /* Width for the middle section */
+}
+
+.middle img {
+    width: 100%;
+    max-height: fit-content;
+    object-fit: contain;
+}
 

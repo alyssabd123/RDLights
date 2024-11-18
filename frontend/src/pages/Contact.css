@@ -22,14 +22,6 @@
     margin-right: -5rem;
 }
 
-.contact-container h1{
-    font-size: 5.5rem !important;
-    margin-right: 13rem;
-    margin-top: -21rem;
-    font-family: "Elephant" !important;
-    color: #2D3194;
-}
-
 /* Styling for form elements */
 .form-container label {
     display: block;
@@ -80,9 +72,20 @@ textarea {
     resize: vertical;
 }
 
-.contact-container h1{
-    font-size: 3rem;
-    font-family: "Elephant" !important;
-    margin-bottom: 1rem;
+.header-container {
+    text-align: center; /* Center-align the header and description */
+    margin-bottom: 20px; /* Add spacing below the description */
+    margin-right: 15rem;
+    margin-bottom: 18rem;
+}
 
+.header-container h1 {
+    margin-bottom: 10px; /* Reduce spacing between the header and description */
+    font-size: 5rem; /* Adjust font size if needed */
+    color: #2D3194; /* Customize the header color */
+}
+
+.header-container p {
+    font-size: 2rem; /* Adjust font size for the description */
+    color: #333; /* Customize the description color */
 }

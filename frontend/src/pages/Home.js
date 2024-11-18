@@ -21,9 +21,9 @@ const Home = () => {
     useEffect(() => {
         const fetchDescriptions = async () => {
             try {
-                const response = await fetch('http://localhost:4000/api/descriptions');
+                const response = await fetch('/api/descriptions');
                 const data = await response.json();
-
+                console.log(data)
                 if (response.ok) {
                     // Convert array to object for easy access by name
                     const descriptionsByName = data.reduce((acc, desc) => {
@@ -58,15 +58,15 @@ const Home = () => {
                 </div>
                 <div className="Rcontent-section">
                     <h1>About Me</h1>
-                    <p>{descriptions['home-about1'] || 'Loading...'}</p>
+                    <p>{descriptions['home-description-about1']}</p>
                 </div>
             </div>
             <div className="third-section">
-                <p>More about Richard</p>
+                <p>{descriptions['home-description-about2']}</p>
             </div>
             <div className="split-section2">
                 <div className="Lcontent-section2">
-                    <h1>More about Richard</h1>
+                    <h1>{descriptions['home-description-about3']}</h1>
                 </div>
                 <div className="Rcontent-section2">
                 </div>

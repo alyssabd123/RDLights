@@ -12,7 +12,10 @@ const Contact = () => {
     }
     return (
         <div className="contact-container">
-            <h1>Contact Us</h1>
+            <div className="header-container">
+                <h1>Contact Us</h1>
+                <p>Contact us description goes right here</p>
+            </div>
             <div className="form-container">
                 <form onSubmit={sendEmail}>
                     <div className="form-group">

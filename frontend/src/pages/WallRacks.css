@@ -72,46 +72,53 @@
 .visual {
     display: flex;
     justify-content: space-between; /* Space out the three sections evenly */
-    align-items: center; /* Ensure horizontal alignment along the center */
+    align-items: flex-start; /* Ensure horizontal alignment along the center */
     height: 80vh; /* Height adjustment for uniform vertical sizing */
-    padding: 0 8vw; /* Add side padding for balanced spacing on edges */
 }
 
-.left, .middle, .right {
+.visual .left, .visual .middle, .visual .right {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content vertically at the top of each section */
     align-items: center; /* Center align content horizontally within the section */
     text-align: center;
+    padding: 0;
 }
 
-.left {
-    width: 30%; /* Width for the left section */
-    padding-right: 2vw; /* Spacing between left and middle */
+.left, .right{
+    width: 25%; /* Adjust width for more spacing */
 }
 
 .left h1, .right h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    color: #2D3194
 }
 
-.left p, .right p {
-    font-size: 1.8rem;
+.left p{
+    font-size: 2.5rem;
     line-height: 2rem;
     margin: 0;
+    padding: 35px;
+    color: #2D3194
+}
+
+.right p {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0;
+    padding: 20px;
+    color: #2D3194
 }
 
 .middle {
-    width: 22%; /* Width for the middle section */
+    width: 100%; /* Width for the middle section */
 }
 
 .middle img {
-    width: 100%; /* Fill the section horizontally */
-    max-height: 60vh; /* Prevent image overflow */
+    width: 100%;
+    max-height: fit-content;
     object-fit: contain;
 }
 
-.right {
-    width: 30%; /* Width for the right section */
-    padding-left: 2vw; /* Spacing between middle and right */
-}

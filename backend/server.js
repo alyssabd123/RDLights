@@ -4,7 +4,10 @@ const nodemailer = require('nodemailer')
 const express = require('express')
 const mongoose = require('mongoose') //require mongoose package
 const productRoutes = require('./routes/productDescriptions')
+const loginRoutes = require('./routes/verifyLogin')
 //const contactRoutes = require('./routes/contactUs')
+const cors = require('cors');
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -17,9 +20,10 @@ const transporter = nodemailer.createTransport({
 //express app
 const app=express()
 
-
 //MIDDLEWARE
 app.use(express.json())
+
+app.use(cors());
 
 app.use((req,res,next) =>{
     console.log(req.path, req.method) //log requests coming in to console
@@ -28,6 +32,7 @@ app.use((req,res,next) =>{
 
 //routes
 app.use('/api/descriptions',productRoutes)
+app.use('/api/login', loginRoutes)
 //app.use('/api/contactUs', contactRoutes)
 
 //connect to db

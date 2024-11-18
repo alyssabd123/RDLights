@@ -38,7 +38,6 @@ const EditDescriptions = () => {
     
         fetchDescriptions();
     }, []);
-    
 
     // Update the selected description or price
     const handleUpdate = async (e) => {

@@ -16,7 +16,7 @@
     width: 60%;
     border-radius: 40px;
     margin-left: 100px;
-
+    line-height: 40px;
     background-color: #ffffff;
 }
 
@@ -35,4 +35,8 @@
     border: 2px solid #000; /* Adds a 2px solid black border */
     padding: 8px; /* Optional: adds some padding inside the input for better appearance */
     border-radius: 4px; /* Optional: adds a slight rounding to the corners */
+}
+
+.w3-button{
+    margin-top: 20px;
 }

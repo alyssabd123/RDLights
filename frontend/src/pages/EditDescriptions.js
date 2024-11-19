@@ -156,15 +156,14 @@ const EditDescriptions = () => {
                 <button type="submit" className="w3-button w3-blue">
                     Update
                 </button>
+                {/* Notifications */}
+                <div>
+                {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                </div>
             </form>
 
                     
-            </div>
-
-            {/* Notifications */}
-            <div>
-                {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
             </div>
 
             {/* Display Products List */}

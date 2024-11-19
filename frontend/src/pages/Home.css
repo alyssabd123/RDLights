@@ -62,6 +62,7 @@
     justify-content: center;      /* Centers content horizontally */
     align-items: center;          /* Centers content vertically */
     text-align: center;           /* Center-aligns the text inside */
+    flex-direction: column;
 }
 
 .third-section{
@@ -102,6 +103,10 @@
     flex: 1;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+}
+
+.Lcontent-section2 h1{
+    font-size: 25px;
 }
 
 .Rcontent-section2{

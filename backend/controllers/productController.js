@@ -41,10 +41,11 @@ const updateDescription = async (req, res) => {
       console.log("Updates:", updates);
 
     try {
-        const data = await Description.findOneAndUpdate({ name: name }, updates, {
-            new: true, // return the updated document
-            runValidators: true, // validate updates against the schema
-        });
+        const data = await Description.findOneAndUpdate(
+            { name }, // Match the document by name
+            updates, // Apply updates (e.g., { description: "new description" })
+            { new: true, runValidators: true } // Return the updated document and validate
+        );
 
         if (!data) {
             return res.status(404).json({ error: "Description not found" });

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const EditDescriptions = () => {
     // State variables
+    const [items, setItems] = useState([]); // All items (products or descriptions)
     const [descriptions, setDescriptions] = useState([]); // All descriptions
     const [products, setProducts] = useState([]); // List of products fetched from the API
     const [successMessage, setSuccessMessage] = useState(''); // Success notification
@@ -50,13 +51,8 @@ const EditDescriptions = () => {
         }
 
         try {
-            const isPrice = selectedOption.includes('price'); // Determine if the field is a price
-            const endpoint = isPrice
-                ? `http://localhost:4000/api/products/${selectedOption}`
-                : `http://localhost:4000/api/descriptions/${selectedOption}`;
-            const payload = isPrice
-                ? { price: parseFloat(newValue) }
-                : { description: newValue };
+            const endpoint = `http://localhost:4000/api/descriptions/${selectedOption}`; // Consolidated endpoint
+            const payload = { description: newValue }; // Unified payload
 
             const response = await fetch(endpoint, {
                 method: 'PATCH',
@@ -70,16 +66,12 @@ const EditDescriptions = () => {
                 setSuccessMessage(`Successfully updated: ${data.name || data.description}`);
                 setErrorMessage('');
 
-                // Update local state for prices dynamically
-                if (isPrice) {
-                    setProducts((prevProducts) =>
-                        prevProducts.map((product) =>
-                            product.name === selectedOption
-                                ? { ...product, price: parseFloat(newValue) }
-                                : product
-                        )
-                    );
-                }
+               // Update the frontend state dynamically
+                setDescriptions((prevDescriptions) =>
+                    prevDescriptions.map((desc) =>
+                        desc.name === selectedOption ? { ...desc, description: newValue } : desc
+                    )
+                );
             } else {
                 setErrorMessage(data.error || 'Failed to update.');
             }

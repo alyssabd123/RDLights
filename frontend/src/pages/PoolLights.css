@@ -1,5 +1,3 @@
- 
-
 .split-section {
     display: flex;
     justify-content: space-between; /* Adds space between left and right sections */
@@ -104,16 +102,6 @@
     height: 80vh; /* Height adjustment for uniform vertical sizing */
 }
 
-.visual .left, .visual .middle, .visual .right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content vertically at the top of each section */
-    align-items: center; /* Center align content horizontally within the section */
-    text-align: center;
-    padding: 0;
-}
-
 .left, .right{
     width: 25%; /* Adjust width for more spacing */
 }
@@ -124,20 +112,26 @@
     color: #2D3194
 }
 
-.left p{
-    font-size: 2.5rem;
-    line-height: 2rem;
+.pool-lights-page .left p{
+    font-size: 3rem;
+    line-height: 2.75rem;
     margin: 0;
-    padding: 35px;
-    color: #2D3194
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: #2D3194;
 }
 
-.right p {
-    font-size: 2rem;
+.pool-lights-page .right p {
+    font-size: 2.75rem;
     line-height: 2rem;
     margin: 0;
     padding: 20px;
-    
+    padding-bottom: 43px;
+    padding-top: 43px;
+}
+
+.pool-lights-page .right .desc {
+    padding-top: 0px;
 }
 
 .middle {

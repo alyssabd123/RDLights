@@ -65,13 +65,13 @@ const PoolLights = () => {
                 <div className = 'right' >
                     <h1>Customizing</h1>
                     <p><b>Dimmable Lights</b></p>
-                    <p>Extra {descriptions['pool-lights-price-dim']}</p>
+                    <p className = 'desc'>Extra {descriptions['pool-lights-price-dim']}</p>
 
                     <p><b>Frame Color</b></p>
-                    <p>{descriptions['pool-lights-price-color']}</p>
+                    <p className = 'desc'>{descriptions['pool-lights-price-color']}</p>
 
                     <p><b>Frame Detailing</b></p>
-                    <p>{descriptions['pool-lights-price-detail']}</p>
+                    <p className = 'desc'>{descriptions['pool-lights-price-detail']}</p>
                 </div>
             </div>
         </div>

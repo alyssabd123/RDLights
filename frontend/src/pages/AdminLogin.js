@@ -25,7 +25,7 @@ const AdminLogin = () => {
         e.preventDefault(); // Prevent the default form submission
         console.log("Form submitted:", formData);
         
-        navigate('/AdminDashboard')
+        navigate('/admin-dashboard')
     };
 
     return (

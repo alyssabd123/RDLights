@@ -36,4 +36,21 @@ adminSchema.statics.signup = async function(username, password) {
   return newAdmin
 }
 
+adminSchema.statics.login = async function(username, password) {
+  // Validation
+  if (!username || !password) {
+    throw new Error("Username and password are required");
+  }
+
+  
+  const admin = await this.findOne( { username })
+  const match  = await bcrypt.compare(password, admin.password)
+
+  if (!admin || !match) {
+    throw Error("Incorrect Login Credentials")
+  }
+
+  return admin
+}
+
 module.exports=mongoose.model('admin', adminSchema)

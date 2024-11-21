@@ -20,7 +20,7 @@ const EditDescriptions = () => {
     useEffect(() => {
         const fetchDescriptions = async () => {
             try {
-                const response = await fetch("http://localhost:4000/api/descriptions");
+                const response = await fetch("/api/descriptions");
                 const data = await response.json();
 
                 if (response.ok) {
@@ -43,7 +43,7 @@ const EditDescriptions = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:4000/api/descriptions/${selected}`
+                `/api/descriptions/${selected}`
             );
             const data = await response.json();
 
@@ -71,7 +71,7 @@ const EditDescriptions = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:4000/api/descriptions/${selectedOption}`,
+                `/api/descriptions/${selectedOption}`,
                 {
                     method: "PATCH",
                     headers: { "Content-Type": "application/json" },

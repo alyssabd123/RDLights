@@ -15,7 +15,7 @@ const adminSchema = new Schema({
     }
 })
 
-userSchema.statics.signup = async (username, password) => {
+adminSchema.statics.signup = async (username, password) => {
   
   // salt and hash the password before storing in database
   const salt = await bcrypt.genSalt(10)

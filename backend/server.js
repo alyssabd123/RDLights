@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // Import routes
 const productRoutes = require('./routes/productDescriptions');
-const loginRoutes = require('./routes/verifyLogin');
+const loginRoutes = require('./routes/adminLogin');
 
 // Configure nodemailer transporter
 const transporter = nodemailer.createTransport({

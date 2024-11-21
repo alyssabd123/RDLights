@@ -9,7 +9,7 @@ import WallRacks from './pages/WallRacks'
 import Installation from './pages/Installation'
 import LayoutWithNavbar from './LayoutWithNavbar'
 import LayoutWithoutNavbar from './LayoutWithoutNavbar'
-import EditDescriptions from './pages/EditDescriptions';
+import EditDescriptions from './pages/AdminDashboard';
 
 function App() {
   return (

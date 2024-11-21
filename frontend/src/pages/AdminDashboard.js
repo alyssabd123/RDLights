@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "w3-css/w3.css";
-import "./EditDescriptions.css";
+import "./AdminDashboard.css";
 import { useNavigate } from "react-router-dom";
 
 const EditDescriptions = () => {

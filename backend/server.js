@@ -22,7 +22,13 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // Parse JSON payloads
-app.use(cors()); // Enable CORS
+app.use(cors(
+  {
+    origin: ["https://rd-lights.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+)); // Enable CORS
 
 // Log incoming requests for debugging
 app.use((req, res, next) => {

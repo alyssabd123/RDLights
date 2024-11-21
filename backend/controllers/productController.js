@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 //create a description
 const createDescription =  async(req,res) => {
-    console.log(req.body); 
+    console.log(req.body);
     const {name, description} = req.body
     //add doc to db
     try{

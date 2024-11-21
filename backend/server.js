@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/descriptions', productRoutes); // Product descriptions API
-app.use('/api', loginRoutes); // Authentication API
+app.use('/api/auth', loginRoutes); // Authentication API
 
 // Connect to MongoDB
 mongoose

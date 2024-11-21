@@ -13,7 +13,7 @@ const credentialsSchema = new Schema({
     }
 })
 // Hash the password before saving the user
-credentialsSchema.pre('save', async function (next) {
+adminSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
@@ -21,8 +21,8 @@ credentialsSchema.pre('save', async function (next) {
 });
 
 // Compare the entered password with the hashed password
-credentialsSchema.methods.comparePassword = async function (password) {
+adminSchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-module.exports=mongoose.model('Credentials', credentialsSchema)
+module.exports=mongoose.model('admin', adminSchema)

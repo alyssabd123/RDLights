@@ -15,8 +15,18 @@ const adminSchema = new Schema({
     }
 })
 
-adminSchema.statics.signup = async (username, password) => {
-  
+adminSchema.statics.signup = async function(username, password) {
+  // Validation
+  if (!username || !password) {
+    throw new Error("Username and password are required");
+  }
+
+  // Check if username is already taken
+  const exists = await this.findOne({ username });
+  if (exists) {
+    throw new Error("Username already in use");
+  }
+
   // salt and hash the password before storing in database
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt)

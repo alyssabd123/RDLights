@@ -1,31 +1,26 @@
 import "./AdminLogin.css";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
+import { useLogin } from '../hooks/useLogin';
 
 const AdminLogin = () => {
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        username: "",
-        password: "",
-    });
+    const { login, isLoading, error } = useLogin()
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const navigate = useNavigate()
 
     const handleBackClick = () => {
         navigate('/');
     };
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent the default form submission
-        console.log("Form submitted:", formData);
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         
-        navigate('/admin-dashboard')
+        const success = await login(username, password)
+        if (success) {
+          navigate('/admin-dashboard')
+        }
+        
     };
 
     return (
@@ -39,8 +34,8 @@ const AdminLogin = () => {
                             type="text"
                             name="username"
                             placeholder="Username"
-                            value={formData.username}
-                            onChange={handleInputChange}
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                             required
                         />
                     </div>
@@ -49,12 +44,13 @@ const AdminLogin = () => {
                             type="password"
                             name="password"
                             placeholder="Password"
-                            value={formData.password}
-                            onChange={handleInputChange}
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                     </div>
-                    <button type="submit" className="submit-button">Submit</button>
+                    <button type="submit" disabled={isLoading} className="submit-button">Submit</button>
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                 </form>
             </div>
         </div>

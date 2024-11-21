@@ -15,7 +15,6 @@ const Navbar = () => {
                 <li><NavLink to="/pool-lights" className="navbar-link">Pool Lights</NavLink></li>
                 <li><NavLink to="/wall-racks" className="navbar-link">Wall Racks</NavLink></li>
                 <li><NavLink to="/installation" className="navbar-link">Installation</NavLink></li>
-                <li><NavLink to="/edit-descriptions" className="navbar-link">InputTest</NavLink></li>
             </ul>
             <button className="contact-button">
                 <Link to="/contact" className="navbar-link-contact">

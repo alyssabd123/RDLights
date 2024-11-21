@@ -9,7 +9,7 @@ import WallRacks from './pages/WallRacks'
 import Installation from './pages/Installation'
 import LayoutWithNavbar from './LayoutWithNavbar'
 import LayoutWithoutNavbar from './LayoutWithoutNavbar'
-import EditDescriptions from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         {/* Route without Navbar */}
         <Route element={<LayoutWithoutNavbar />}>
           <Route path="/admin-login" element={<AdminLogin />} />
-          <Route path="/edit-descriptions" element={<EditDescriptions />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

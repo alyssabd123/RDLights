@@ -25,27 +25,7 @@ const AdminLogin = () => {
         e.preventDefault(); // Prevent the default form submission
         console.log("Form submitted:", formData);
         
-        // Replace the URL with your API endpoint
-        fetch('http://localhost:4000/api/admin-login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            if (data.success) {
-                // Navigate to another page upon successful login
-                navigate('/admin-dashboard');
-            } else {
-                alert('Login failed. Please check your username and password.');
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        navigate('/AdminDashboard')
     };
 
     return (

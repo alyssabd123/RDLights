@@ -12,7 +12,7 @@
 }
 
 .installationTop h2{
-    font-size: 40px;
+    font-size: 50px;
     text-align: left;
     padding-left: 25px;
     padding-right: 25px;
@@ -21,8 +21,11 @@
 .installationTop p{
     font-size: 25px;
     text-align: left;
-    padding-left: 40px;
+    padding-left: 100px;
     padding-right: 25px;
+    line-height: 60px;
+    width: 90rem;
+    
 }
 
 .installationBottom{
@@ -39,7 +42,7 @@
 }
 
 .installationBottom h2{
-    font-size: 40px;
+    font-size: 50px;
     text-align: left;
     padding-left: 25px;
     padding-right: 25px;
@@ -48,6 +51,7 @@
 .installationBottom p{
     font-size: 25px;
     text-align: left;
-    padding-left: 40px;
-    padding-right: 25px;
+    padding-left: 100px;
+    padding-right: 80px;
+    line-height: 60px;
 }

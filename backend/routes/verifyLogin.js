@@ -1,10 +1,8 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const User = require('../models/login');
-const router = express.Router()
-
+const router = express.Router();
 
 router.post('/api/register', async (req, res) => {
   try {
@@ -16,13 +14,14 @@ router.post('/api/register', async (req, res) => {
 
     res.status(201).json({ success: true, message: 'User registered successfully' });
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Server error' });
+    res.status(500).json({ success: false, message: 'Server error', error: error.message });
   }
 });
 
-router.get('/', async (req, res) => {
-  const { username, password } = req.body;
-  try{
+router.post('/api/login', async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
     // Check if the user exists
     const user = await User.findOne({ username });
     if (!user) {
@@ -37,13 +36,13 @@ router.get('/', async (req, res) => {
 
     // Generate JWT
     const token = jwt.sign({ id: user._id, username: user.username }, process.env.JWT_SECRET, {
-      expiresIn: '1h', // Token valid for 1 hour
+      expiresIn: '1h',
     });
 
     res.status(200).json({ success: true, token });
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Server error' });
+    res.status(500).json({ success: false, message: 'Server error', error: error.message });
   }
-})
+});
 
-module.exports = router
+module.exports = router;

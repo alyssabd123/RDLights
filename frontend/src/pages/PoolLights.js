@@ -47,7 +47,7 @@ const PoolLights = () => {
                 </div>
             </div>
             <div className='bar'>
-                <h1>PRICING</h1>
+                <h1>Pricing</h1>
             </div>
             <div className="visual" id="visual">
                 <div className = 'left' >

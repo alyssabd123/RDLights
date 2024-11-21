@@ -40,3 +40,14 @@
 .w3-button{
     margin-top: 20px;
 }
+
+.w3-border {
+    width: 100%; /* Maintain full width */
+    padding: 10px; /* Padding for better readability */
+    font-family: inherit;
+    font-size: inherit;
+    resize: vertical; /* Allow manual resizing if desired */
+    max-height: 200px; /* Limit height before scroll bar appears */
+    overflow-y: auto; /* Add vertical scroll bar when content overflows */
+    line-height: 1.5; /* Ensure proper line spacing */
+}

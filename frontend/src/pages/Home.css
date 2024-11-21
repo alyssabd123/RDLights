@@ -14,7 +14,7 @@
 
     margin: 0;                
     font-family: "Josefin Sans", sans-serif; 
-    overflow-y: auto; /* Ensures vertical scroll if content exceeds viewport */
+    overflow-y: none; /* Ensures vertical scroll if content exceeds viewport */
 }
 
 .homepageRight {
@@ -35,7 +35,8 @@
 }
 
 .homepageRight p{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 5rem;
 }
 
 .split-section{
@@ -49,10 +50,11 @@
 .Lcontent-section{
     flex: 1;
     background-color: #FFD401;
-    background-image: url('../images/RDLightsImage2.png');
+    background-image: url('../images/richardheadshop-.jpg');
     background-size: 80%;  
     background-repeat: no-repeat; 
     background-position: center;
+    background-size: 50%;
 }
 
 .Rcontent-section{
@@ -65,11 +67,28 @@
     flex-direction: column;
 }
 
+.Rcontent-section h1{
+    color: #2D3194;
+    font-size: 50px;
+}
+
+.Rcontent-section h2{
+    margin: 0 10px;
+    color: #2D3194;
+}
+
 .third-section{
     background-color: #2D3194;
     height: 55vh;
     text-align: center;
-    color: white; 
+    color: white;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 10px;
+    line-height: 85px;
 }
 
 .homepageRight button{
@@ -77,12 +96,12 @@
     height: 5rem;
     border: solid #2D3194;
     border-width: 0 7.5px 7.5px 0;
-    display: inline-block;
+    display: inline-block; 
     padding: 3px;
     transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: 10%;
+    -webkit-transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 10%;
 }
 
 .homepageRight button:hover{
@@ -93,10 +112,10 @@
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: 10%;
-  transition: 0.1s;
+    -webkit-transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 10%;
+    transition: 0.1s;
 }
 
 .Lcontent-section2{
@@ -112,7 +131,6 @@
     font-size: 30px;
     color: #2D3194;
     text-align: center;  
-
 }
 
 .Rcontent-section2{
@@ -126,11 +144,10 @@
     text-align: center;           /* Center-aligns the text inside */
     color: white;
     background-image: url('../images/home3right.png');
-
 }
 
 .split-section2{
-    margin-top: -200px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between; /* Adds space between left and right boxes */
     align-items: stretch;          /* Makes both sections stretch to fill height */

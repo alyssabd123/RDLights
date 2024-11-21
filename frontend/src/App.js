@@ -7,7 +7,6 @@ import AdminLogin from './pages/AdminLogin'
 import PoolLights from './pages/PoolLights'
 import WallRacks from './pages/WallRacks'
 import Installation from './pages/Installation'
-
 import LayoutWithNavbar from './LayoutWithNavbar'
 import LayoutWithoutNavbar from './LayoutWithoutNavbar'
 import EditDescriptions from './pages/EditDescriptions';

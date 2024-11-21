@@ -1,53 +1,50 @@
-require('dotenv').config()
-const nodemailer = require('nodemailer')
-
-const express = require('express')
-const mongoose = require('mongoose') //require mongoose package
-const productRoutes = require('./routes/productDescriptions')
-const loginRoutes = require('./routes/verifyLogin')
-//const contactRoutes = require('./routes/contactUs')
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const nodemailer = require('nodemailer');
 const cors = require('cors');
 
+// Import routes
+const productRoutes = require('./routes/productDescriptions');
+const loginRoutes = require('./routes/verifyLogin');
+
+// Configure nodemailer transporter
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
-    }
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+// Initialize express app
+const app = express();
+
+// Middleware
+app.use(express.json()); // Parse JSON payloads
+app.use(cors()); // Enable CORS
+
+// Log incoming requests for debugging
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+  next();
+});
+
+// Routes
+app.use('/api/descriptions', productRoutes); // Product descriptions API
+app.use('/api', loginRoutes); // Authentication API
+
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('✅ MongoDB connected successfully!');
+    // Start the server after successful DB connection
+    const PORT = process.env.PORT || 4000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error('❌ MongoDB connection failed:', error.message);
   });
-
-
-//express app
-const app=express()
-
-//MIDDLEWARE
-app.use(express.json())
-
-app.use(cors());
-
-app.use((req,res,next) =>{
-    console.log(req.path, req.method) //log requests coming in to console
-    next()
-})
-
-//routes
-app.use('/api/descriptions',productRoutes)
-app.use('/api/login', loginRoutes)
-//app.use('/api/contactUs', contactRoutes)
-
-//connect to db
-mongoose.connect(process.env.MONGO_URI)
-    .then(()=>{ //after connected to db
-        console.log('MongoDB connected!') //hi
-    })
-    .catch((error) =>{
-        console.log(error)
-    })
-
-//listen on port for requests
-app.listen(process.env.PORT, async () =>{
-    console.log('listening on port 4000!')
-    // // Dynamically import the 'open' module
-    // const open = (await import('open')).default;
-    // await open(`http://localhost:${process.env.PORT}`);
-})

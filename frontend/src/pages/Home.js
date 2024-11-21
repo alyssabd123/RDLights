@@ -57,12 +57,12 @@ const Home = () => {
                 <div className="Lcontent-section">
                 </div>
                 <div className="Rcontent-section">
-                    <h1>About Me</h1>
-                    <p>{descriptions['home-description-about1']}</p>
+                    <h1><b>About Me</b></h1>
+                    <h2>{descriptions['home-description-about1']}</h2>
                 </div>
             </div>
             <div className="third-section">
-                <p>{descriptions['home-description-about2']}</p>
+                <h2>{descriptions['home-description-about2']}</h2>
             </div>
             <div className="split-section2">
                 <div className="Lcontent-section2">

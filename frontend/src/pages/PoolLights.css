@@ -15,7 +15,8 @@
     background-color: white;    /* Optional: background color for visibility */
     text-align: center;             /* Center-aligns text inside */
     padding: 10px;                 /* Optional padding for spacing */
-    flex-direction: column;       /*Makes each text in column*/        
+    flex-direction: column;       /*Makes each text in column*/    
+
 }
 
 .lightsRight button{
@@ -64,7 +65,7 @@
     font-size: 10px;
     color: #2D3194;
     text-align: center;
-    margin: 0;
+    padding-top: 55px;
 }
 
 .lightsRight{
@@ -75,7 +76,11 @@
     align-items: center;            /* Centers content vertically */
     text-align: center;             /* Center-aligns text inside */
     padding: 10px;                  /* Optional padding for spacing */
-    background-image:  url('../images/RDLightsImage2.png');
+    background-image:  url('../images/RealPoolTable.jpg');
+    background-size: cover;          /* Ensures the image covers the entire container */
+    background-position: center;     /* Centers the image within the container */
+    background-repeat: no-repeat;
+    padding-top: 39.5%;
 }
 
 .lightsLeft p{

@@ -20,15 +20,12 @@ const transporter = nodemailer.createTransport({
 // Initialize express app
 const app = express();
 
-// Middleware
-app.use(express.json()); // Parse JSON payloads
-app.use(cors(
-  {
-    origin: ["https://rd-lights.vercel.app/"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-)); // Enable CORS
+app.use(cors({
+  origin: ["https://rd-lights.vercel.app/"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
+
 
 // Log incoming requests for debugging
 app.use((req, res, next) => {
@@ -46,7 +43,7 @@ mongoose
   .then(() => {
     console.log('✅ MongoDB connected successfully!');
     // Start the server after successful DB connection
-    const PORT = process.env.PORT || 4000;
+    const PORT = process.env.PORT || 4000 ;
     app.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);
     });

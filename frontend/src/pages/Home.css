@@ -1,156 +1,253 @@
-/* Ensure the Elephant font is applied to everything text-wise */
+/* Base styles */
 * {
     font-family: "Elephant" !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html, body {
+    min-width: 320px;
+    overflow-x: hidden;
+    height: 100%;
+}
 
 .home-page {
+    position: relative;
     min-height: 100vh;
+    width: 100%;
     background-image: linear-gradient(rgba(255, 212, 1, 0.45), rgba(255, 212, 1, 0.2)),
     url('../images/RDLightsImage2.png');
     background-size: 100% 50%;      
     background-repeat: no-repeat; 
-    background-position: center -1%; /* Moves the image down by 20% */
-
+    background-position: center top;
     margin: 0;                
-    font-family: "Josefin Sans", sans-serif; 
-    overflow-y: none; /* Ensures vertical scroll if content exceeds viewport */
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
 }
 
 .homepageRight {
-    color: #2D3194; /* Adjust text color if needed for readability */
+    color: #2D3194;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
-    min-height: 95vh;
-    width: 30vw;          /* Adjust width to control horizontal coverage */
-    margin-left: auto;    /* Aligns it to the right */
-    flex-direction: column;
-    justify-content: center; 
-}
-
-.homepageRight h1{
-    font-size: 5rem !important;
-    font-family: "Elephant", Serif;
-}
-
-.homepageRight p{
-    font-size: 2rem;
-    line-height: 5rem;
-}
-
-.split-section{
-    margin-top: -200px;
+    height: 95vh;
+    width: 30%;
+    margin-left: auto;
     display: flex;
-    justify-content: space-between; /* Adds space between left and right boxes */
-    align-items: stretch;
-    height: 50vh; /* Adjust height as needed */
+    flex-direction: column;
+    justify-content: center;
 }
 
-.Lcontent-section{
+.homepageRight h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.homepageRight p {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.split-section {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: -20vh;
+    min-height: 50vh;
+}
+
+.Lcontent-section {
     flex: 1;
     background-color: #FFD401;
     background-image: url('../images/richardheadshop-.jpg');
-    background-size: 80%;  
+    background-size: 50%;  
     background-repeat: no-repeat; 
     background-position: center;
-    background-size: 50%;
 }
 
-.Rcontent-section{
+.Rcontent-section {
     flex: 2;
     background-color: white;
-    display: flex;                /* Makes right-box a flex container */
-    justify-content: center;      /* Centers content horizontally */
-    align-items: center;          /* Centers content vertically */
-    text-align: center;           /* Center-aligns the text inside */
+    padding: 3rem;
+    display: flex;
     flex-direction: column;
-}
-
-.Rcontent-section h1{
-    color: #2D3194;
-    font-size: 50px;
-}
-
-.Rcontent-section h2{
-    margin: 0 10px;
-    color: #2D3194;
-}
-
-.third-section{
-    background-color: #2D3194;
-    height: 55vh;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: white;  
+}
+
+.Rcontent-section h1 {
+    color: #2D3194;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.Rcontent-section h2 {
+    color: #2D3194;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.third-section {
+    width: 100%;
+    background-color: #2D3194;
+    padding: 4rem 2rem;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 0 10px;
-    line-height: 85px;
+    text-align: center;
 }
 
-.homepageRight button{
+.third-section h2 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.homepageRight button {
     width: 5rem;
     height: 5rem;
     border: solid #2D3194;
     border-width: 0 7.5px 7.5px 0;
-    display: inline-block; 
     padding: 3px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    background-color: rgba(255, 255, 255, 0);
-    margin-top: 10%;
+    background-color: transparent;
+    margin: 2rem auto 0;
+    cursor: pointer;
+    transition: border-color 0.1s;
 }
 
-.homepageRight button:hover{
-    width: 5rem;
-    height: 5rem;
-    border: solid #FFD401;
-    border-width: 0 7.5px 7.5px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    background-color: rgba(255, 255, 255, 0);
-    margin-top: 10%;
-    transition: 0.1s;
+.homepageRight button:hover {
+    border-color: #FFD401;
 }
 
-.Lcontent-section2{
+.split-section2 {
+    width: 100%;
+    display: flex;
+    min-height: 60vh;
+}
+
+.Lcontent-section2 {
     flex: 1.25;
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    height: 100%;                 /* Match the height of the parent */
-    padding: 20px; 
-    line-height: 3.5rem;
-}
-
-.Lcontent-section2 h1{
-    font-size: 30px;
-    color: #2D3194;
-    text-align: center;  
-}
-
-.Rcontent-section2{
-    background-repeat: no-repeat;
-    background-size: cover; 
-    flex: 2;
-    background-color: rgb(0, 0, 0);
-    display: flex;                /* Makes right-box a flex container */
-    justify-content: center;      /* Centers content horizontally */
-    align-items: center;          /* Centers content vertically */
-    text-align: center;           /* Center-aligns the text inside */
-    color: white;
-    background-image: url('../images/home3right.png');
-}
-
-.split-section2{
-    margin-top: 0px;
+    padding: 3rem;
     display: flex;
-    justify-content: space-between; /* Adds space between left and right boxes */
-    align-items: stretch;          /* Makes both sections stretch to fill height */
-    height: 120vh;                 /* Increase the height (e.g., 120% of the viewport height) */ 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+.Lcontent-section2 h1 {
+    font-size: 1.75rem;
+    color: #2D3194;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.Rcontent-section2 {
+    flex: 2;
+    background-color: #000;
+    background-image: url('../images/home3right.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .homepageRight {
+        width: 40%;
+    }
+
+    .homepageRight h1 {
+        font-size: 4rem;
+    }
+
+    .Rcontent-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-page {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .homepageRight {
+        width: 100%;
+        height: auto;
+        min-height: 80vh;
+        padding: 2rem 1rem;
+    }
+
+    .homepageRight h1 {
+        font-size: 3.5rem;
+    }
+
+    .homepageRight p {
+        font-size: 1.5rem;
+    }
+
+    .split-section {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .split-section2 {
+        flex-direction: column;
+    }
+
+    .Lcontent-section,
+    .Rcontent-section,
+    .Lcontent-section2,
+    .Rcontent-section2 {
+        min-height: 50vh;
+    }
+
+    .Rcontent-section {
+        padding: 2rem 1rem;
+    }
+
+    .Rcontent-section h1 {
+        font-size: 2rem;
+    }
+
+    .Rcontent-section h2,
+    .third-section h2,
+    .Lcontent-section2 h1 {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .homepageRight h1 {
+        font-size: 2.5rem;
+    }
+
+    .homepageRight p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+
+    .Rcontent-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .Rcontent-section h2,
+    .third-section h2,
+    .Lcontent-section2 h1 {
+        font-size: 1.125rem;
+    }
+}

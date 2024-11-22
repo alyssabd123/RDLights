@@ -5,29 +5,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2D3194; /* Dark background color */
-    color: #fff; /* White text color */
+    background-color: #2D3194;
+    color: #fff;
     font-family: "Josefin Sans", sans-serif;
-    margin:0;
+    margin: 0;
+    padding: 0.5rem 2rem;
+    position: relative;
+}
+
+.logo-link img {
+    width: 150px;
+    height: auto;
 }
 
 .navbar-links {
     display: flex;
     align-items: center;
-    margin: 0 2rem;
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-    position: relative;
-    left: -70px; /* Adjust to move it to the left */
-}
-
-.navbar-links img {
-    width: 150px; /* Example width */
-    height: auto;
 }
 
 .navbar-link.active {
-    text-decoration: underline; /* Underline the active link */
-    font-weight: bold;          /* Optional: Make active link bold */
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .navbar-link {
@@ -41,25 +42,98 @@
 .navbar-link-contact {
     color: #2D3194;
     text-decoration: none;
-    margin: .25rem 1rem;
     font-size: 1.5rem;
-    display: inline-block;
 }
 
 .navbar-link:hover {
-    color: #FFD401; /* Hover effect color */
+    color: #FFD401;
 }
 
 .contact-button {
-    background-color: #FFD401; /* Yellow button color */
+    background-color: #FFD401;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 30px;
     cursor: pointer;
-    position: relative;
-    left: -30px; /* Adjust to move it to the left */
+    display: inline-block;
 }
 
 .contact-button:hover {
-    background-color: #ffd50195; /* Darker orange on hover */
+    background-color: #ffd50195;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #2D3194;
+        padding: 1rem 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+        opacity: 0;
+    }
+
+    .navbar-links.active {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-link {
+        margin: 0;
+        padding: 0.5rem 0;
+        width: 100%;
+        display: block;
+    }
+
+    .contact-button {
+        position: static;
+        margin-left: 1rem;
+    }
+}
+
+/* Additional mobile adjustment for the logo */
+@media screen and (max-width: 480px) {
+    .logo-link img {
+        width: 120px;
+    }
 }

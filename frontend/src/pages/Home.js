@@ -1,5 +1,10 @@
+// Home.jsx
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+// Import images with correct path
+import richardShop from '../images/richardheadshop-.jpg';
+import poolTable from '../images/home3right.png';
+import backgroundImage from '../images/RDLightsImage2.png';
 
 const Home = () => {
     const [descriptions, setDescriptions] = useState({});
@@ -38,7 +43,9 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='home-page'>
+        <div className='home-page' style={{
+            backgroundImage: `linear-gradient(rgba(255, 212, 1, 0.45), rgba(255, 212, 1, 0.2)), url(${backgroundImage})`
+        }}>
             <div className="content-wrapper">
                 <div className="homepageRight">
                     <h1>R.D. Lights</h1>
@@ -50,9 +57,17 @@ const Home = () => {
                         aria-label="Scroll to About section"
                     />
                 </div>
-                <main>
+                <main className="main-content">
                     <section id="split-section" className="split-section">
-                        <div className="Lcontent-section" />
+                        <div className="Lcontent-section">
+                            <div className="image-wrapper">
+                                <img 
+                                    src={richardShop}
+                                    alt="Richard's Shop"
+                                    className="content-image"
+                                />
+                            </div>
+                        </div>
                         <div className="Rcontent-section">
                             <h1>About Me</h1>
                             <h2>{descriptions['home-description-about1']}</h2>
@@ -65,7 +80,15 @@ const Home = () => {
                         <div className="Lcontent-section2">
                             <h1>{descriptions['home-description-about3']}</h1>
                         </div>
-                        <div className="Rcontent-section2" />
+                        <div className="Rcontent-section2">
+                            <div className="image-wrapper">
+                                <img 
+                                    src={poolTable}
+                                    alt="Pool Table Setup"
+                                    className="content-image"
+                                />
+                            </div>
+                        </div>
                     </section>
                 </main>
             </div>

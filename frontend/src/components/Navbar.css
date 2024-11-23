@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0.5rem 2rem;
     position: relative;
+    z-index: 1000; /* Added this line */
 }
 
 .logo-link img {
@@ -24,6 +25,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    z-index: 1001; /* Added this line */
 }
 
 .navbar-link.active {
@@ -105,6 +107,7 @@
         transform-origin: top;
         transition: transform 0.3s ease;
         opacity: 0;
+        z-index: 1001; /* Added to ensure it appears above other elements */
     }
 
     .navbar-links.active {

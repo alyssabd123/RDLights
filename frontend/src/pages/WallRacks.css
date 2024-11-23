@@ -1,47 +1,55 @@
-.split-section{
+.split-section {
     margin-top: 0px;
     display: flex;
-    justify-content: space-between; /* Adds space between left and right boxes */
+    justify-content: space-between;
     align-items: stretch;
-    height: 50vh; /* Adjust height as needed */
+    height: 100vh; /* Increased height to match the right side */
 }
 
+/* Adjusted racksLeft */
+.racksLeft {
+    flex: 1;
+    margin: 2rem;
+    margin-right: 0;
+    position: relative;
+    min-width: 45%;
+}
+
+.racksLeft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/racks.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Changed from cover to contain */
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* Ensure background stays behind content */
+}
+
+/* Original racksRight styles retained */
 .racksRight {
     color: #2D3194; /* Adjust text color if needed for readability */
     text-align: center;
     min-height: 95vh;
-    width: 45vw;          /* Adjust width to control horizontal coverage */
-    margin-right: 100px;    /* Aligns it to the right */
+    width: 45vw; /* Adjust width to control horizontal coverage */
+    margin-right: 100px; /* Aligns it to the right */
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.racksRight h1{
+.racksRight h1 {
     font-size: 100px;
     background-color: #FFD401;
 }
 
-.racksRight p{
+.racksRight p {
     font-size: 30px;
     line-height: 70px;
-}
-
-.racksLeft {
-    flex: 1;
-    background-image: url('../images/racks.jpg');
-    background-repeat: no-repeat;    /* Prevents the image from repeating */
-    background-position: center;     /* Centers the image within the container */
-    background-size: 75% 44rem;          /* Ensures the image covers the entire container */
-    height: 38.68rem;
-}
-
-.bar h1{
-    font-size: 80px;
-    background-color: #FFD401;
-    color: #2D3194;
-    text-align: center;
-    margin-top: 190px;
-    margin-bottom: 0px;
 }
 
 .racksRight button {
@@ -54,7 +62,7 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     background-color: transparent; /* Ensure transparency */
-    margin-top: -30px;
+    margin-top: 20px;
     cursor: pointer; /* Add pointer cursor for better UX */
 }
 
@@ -63,73 +71,152 @@
     background-color: transparent; /* Keep the background transparent */
 }
 
-
-.homepageRight button:hover{
-    background-color: #FFD401; 
-    border-color: #FFD401;
-    width: 5rem;
-    height: 5rem;
-    border: solid #FFD401;
-    border-width: 0 7.5px 7.5px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    background-color: rgba(255, 255, 255, 0);
-    margin-top: 10%;
-    transition: 0.1s;
+/* Updated bar header */
+.bar h1 {
+    font-size: 80px;
+    background-color: #FFD401;
+    color: #2D3194;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
 }
 
+/* Updated visual section layout and proportions */
 .visual {
     display: flex;
-    justify-content: space-between; /* Space out the three sections evenly */
-    align-items: flex-start; /* Ensure horizontal alignment along the center */
-    height: 80vh; /* Height adjustment for uniform vertical sizing */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 120px;
+    background-color: white;
+    min-height: 600px;
+    margin-top: 40px;
 }
 
-.visual .left, .visual .middle, .visual .right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content vertically at the top of each section */
-    align-items: center; /* Center align content horizontally within the section */
-    text-align: center;
+.visual .left,
+.visual .right {
+    flex: 0.8; /* Reduced from 1 */
+    width: 20%; /* Reduced from 25% */
+    text-align: left;
     padding: 0;
 }
 
-.left, .right{
-    width: 25%; /* Adjust width for more spacing */
-}
-
-.left h1, .right h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    color: #2D3194
-}
-
-.left p{
-    font-size: 2.5rem;
-    line-height: 2rem;
-    margin: 0;
-    padding: 35px;
-    color: #2D3194
-}
-
-.right p {
-    font-size: 2rem;
-    line-height: 2rem;
-    margin: 0;
-    padding: 20px;
-    color: #2D3194
-}
-
-.middle {
-    width: 100%; /* Width for the middle section */
+.visual .middle {
+    flex: 1.4; /* Increased from 1 */
+    width: 60%; /* Increased from 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px; /* Increased padding */
 }
 
 .middle img {
     width: 100%;
-    max-height: fit-content;
+    max-width: 700px; /* Increased from 500px */
+    height: auto;
     object-fit: contain;
+    margin: 40px 0;
 }
 
+/* Adjust text sizes */
+.left h1,
+.right h1 {
+    font-size: 3.5rem; /* Reduced from 5rem */
+    color: #2D3194;
+    margin-bottom: 2rem; /* Reduced from 3rem */
+    text-align: left;
+}
+
+.left p,
+.right p {
+    font-size: 1.8rem; /* Reduced from 2.5rem */
+    line-height: 1.8; /* Reduced from 2 */
+    color: #2D3194;
+    margin: 1rem 0; /* Reduced from 1.5rem */
+    text-align: left;
+    padding: 5px 0;
+}
+
+/* Update the asterisk text size */
+.left p:last-child {
+    font-size: 0.9rem; /* Reduced from 1rem */
+    margin-top: 1.5rem;
+    color: #2D3194;
+    opacity: 0.8;
+}
+
+/* Keep your existing media queries, just update these values within them */
+@media screen and (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .racksLeft {
+        min-height: 400px;
+        margin: 1rem;
+    }
+
+    .racksRight {
+        width: 90%;
+        min-height: auto;
+        margin: 1rem auto;
+    }
+
+    .visual {
+        flex-direction: column;
+        padding: 20px;
+        min-height: auto;
+        align-items: center; /* Center all content */
+    }
+
+    .visual .left,
+    .visual .middle,
+    .visual .right {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .visual .middle {
+        padding: 30px;
+    }
+
+    .middle img {
+        max-width: 85%; /* Make image slightly smaller */
+        margin: 20px auto; /* Center the image */
+    }
+
+    .left h1,
+    .right h1 {
+        font-size: 2.8rem;
+    }
+
+    .left p,
+    .right p {
+        font-size: 1.6rem;
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+/* Very small devices */
+@media screen and (max-width: 480px) {
+    .visual {
+        padding: 10px;
+    }
+
+    .visual .left,
+    .visual .middle,
+    .visual .right {
+        padding: 10px 20px; /* Add horizontal padding */
+    }
+
+    .middle img {
+        max-width: 90%;
+    }
+}

@@ -1,57 +1,74 @@
-.installationTop{
+.installationTop {
     flex: 1; 
     flex-direction: column;
-    color:#2D3194;
+    color: #2D3194;
+    width: 100%;
 }
 
-.installationTop h1{
-    font-size: 80px;
+.installationTop h1 {
+    font-size: clamp(40px, 5vw, 80px);
     background-color: #FFD401;
     color: #2D3194;
     text-align: center;
+    width: 100%;
 }
 
-.installationTop h2{
-    font-size: 50px;
+.installationTop h2 {
+    font-size: clamp(30px, 4vw, 50px);
     text-align: left;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.installationTop p{
-    font-size: 25px;
+.installationTop p {
+    font-size: clamp(16px, 3vw, 25px);
     text-align: left;
-    padding-left: 100px;
+    padding-left: min(100px, 5%);
     padding-right: 25px;
-    line-height: 60px;
-    width: 90rem;
-    
+    line-height: 1.6;
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-.installationBottom{
+.installationBottom {
     flex: 1; 
     flex-direction: column;
-    color:#2D3194;
+    color: #2D3194;
+    width: 100%;
 }
 
-.installationBottom h1{
-    font-size: 80px;
+.installationBottom h1 {
+    font-size: clamp(40px, 5vw, 80px);
     background-color: #FFD401;
     color: #2D3194;
     text-align: center;
+    width: 100%;
 }
 
-.installationBottom h2{
-    font-size: 50px;
+.installationBottom h2 {
+    font-size: clamp(30px, 4vw, 50px);
     text-align: left;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.installationBottom p{
-    font-size: 25px;
+.installationBottom p {
+    font-size: clamp(16px, 3vw, 25px);
     text-align: left;
-    padding-left: 100px;
-    padding-right: 80px;
-    line-height: 60px;
+    padding-left: min(100px, 5%);
+    padding-right: min(80px, 5%);
+    line-height: 1.6;
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .installationTop p,
+    .installationBottom p {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
+    }
 }

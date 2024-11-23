@@ -1,151 +1,224 @@
-.split-section {
-    display: flex;
-    justify-content: space-between; /* Adds space between left and right sections */
-    align-items: stretch;           /* Makes both sections stretch to the full height */
-    height: 200vh;                   /* Adjust height as needed */
-    width: 100%;                    /* Ensures it spans full width */
-    margin-top: -300px;             /* Adjusts vertical positioning */
-}
-
-.lightsLeft {
-    flex: 1;                        /* Makes left section flexible */
-    display: flex;                  /* Flex container for centering */
-    justify-content: center;        /* Centers content horizontally */
-    align-items: center;            /* Centers content vertically */
-    background-color: white;    /* Optional: background color for visibility */
-    text-align: center;             /* Center-aligns text inside */
-    padding: 10px;                 /* Optional padding for spacing */
-    flex-direction: column;       /*Makes each text in column*/    
-
-}
-
-.lightsRight button{
-    width: 5rem;
-    height: 5rem;
-    border: solid #2D3194;
-    border-width: 0 7.5px 7.5px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: 35rem;
-}
-
-.lightsRight button:hover{
-    width: 5rem;
-    height: 5rem;
-    border: solid #FFD401;
-    border-width: 0 7.5px 7.5px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    background-color: rgba(255, 255, 255, 0);
-    transition: 0.15s;
-}
-
-#headera{
-    font-size: 80px;
-    background-color: #FFD401;
-    color: #2D3194;
-    text-align: center;
-    min-width: 800px;
-    line-height: -500; /* Adjust line height for text block height */
-    padding: 5px 0; /* Minimal padding to reduce the background height */
-
-    display: flex;
-    align-items: center;     /* Centers vertically */
-    justify-content: center; /* Centers horizontally */
-
-    margin-top: 150px; /* Adjust value to move the element down */
-}
-
-.lightsLeft p{
-    font-size: 10px;
-    color: #2D3194;
-    text-align: center;
-    padding-top: 55px;
-}
-
-.lightsRight{
-    flex: 1;                        /* Makes right section take up more space */
-    background-color: white;        /* Background color for visibility */
-    display: flex;                  /* Flex container for centering */
-    justify-content: center;        /* Centers content horizontally */
-    align-items: center;            /* Centers content vertically */
-    text-align: center;             /* Center-aligns text inside */
-    padding: 10px;                  /* Optional padding for spacing */
-    background-image:  url('../images/RealPoolTable.jpg');
-    background-size: cover;          /* Ensures the image covers the entire container */
-    background-position: center;     /* Centers the image within the container */
-    background-repeat: no-repeat;
-    padding-top: 39.5%;
-}
-
-.lightsLeft p{
-    font-size: 30px;
-}
-
-.lightsLeft h1{
-    font-size: 100px;
-}
-
-.bar h1{
-    font-size: 80px;
-    background-color: #FFD401;
-    color: #2D3194;
-    text-align: center;
-    margin-top: 190px;
-    margin-bottom: 0px;
-}
-
-.visual {
-    display: flex;
-    justify-content: space-between; /* Space out the three sections evenly */
-    align-items: flex-start; /* Ensure horizontal alignment along the center */
-    height: 80vh; /* Height adjustment for uniform vertical sizing */
-}
-
-.left, .right{
-    width: 25%; /* Adjust width for more spacing */
-}
-
-.left h1, .right h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    color: #2D3194
-}
-
-.pool-lights-page .left p{
-    font-size: 3rem;
-    line-height: 2.75rem;
-    margin: 0;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    color: #2D3194;
-}
-
-.pool-lights-page .right p {
-    font-size: 2.75rem;
-    line-height: 2rem;
-    margin: 0;
-    padding: 20px;
-    padding-bottom: 43px;
-    padding-top: 43px;
-}
-
-.pool-lights-page .right .desc {
-    padding-top: 0px;
-}
-
-.middle {
-    width: 100%; /* Width for the middle section */
-}
-
-.middle img {
+/* PoolLights.css */
+.pool-lights-page {
     width: 100%;
-    max-height: fit-content;
-    object-fit: contain;
+    min-height: 100vh;
+    background-color: white;
 }
 
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    min-height: fit-content; /* Changed from 100vh */
+    position: relative;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    min-height: fit-content; /* Changed from 100vh */
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from center */
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.text-content h1 {
+    font-size: 5rem;
+    color: #2D3194;
+    background-color: #FFD401;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    min-width: 80%;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    color: #2D3194;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 2rem; /* Added margin bottom */
+}
+
+.image-content {
+    flex: 1;
+    background-image: url('../images/RealPoolTable.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px; /* Added fixed minimum height */
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 0; /* Remove default padding */
+}
+
+.pricing-section h2 {
+    font-size: 65px; /* Reduced from 80px */
+    color: #2D3194;
+    text-align: center;
+    background-color: #FFD401;
+    padding: 15px 0; /* Reduced from 20px */
+    margin: 0;
+    width: 100%;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 160px; /* Increased outer padding */
+    background-color: white;
+    min-height: 500px; /* Reduced from 600px */
+    margin-top: 30px; /* Reduced from 40px */
+    max-width: none; /* Remove max-width constraint */
+}
+
+.pricing-column {
+    flex: 1; /* Changed from 0.8 */
+    width: 25%; /* Increased from 20% */
+    padding: 0 40px; /* Added padding to center content within columns */
+}
+
+.pricing-diagram {
+    flex: 1.2; /* Reduced from 1.4 */
+    width: 50%; /* Reduced from 60% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Reduced padding */
+}
+
+.pricing-diagram img {
+    width: 100%;
+    max-width: 500px; /* Reduced from 600px */
+    height: auto;
+    object-fit: contain;
+    margin: 30px auto; /* Center the image */
+}
+
+.pricing-column h3 {
+    font-size: 2.8rem; /* Reduced from 3.5rem */
+    color: #2D3194;
+    margin-bottom: 2rem; /* Adjusted spacing */
+    text-align: center; /* Center titles */
+    font-family: serif;
+    font-weight: bold;
+}
+
+.price-list p,
+.customization-list p {
+    font-size: 1.5rem; /* Reduced from 1.8rem */
+    line-height: 1.6;
+    color: #2D3194;
+    margin: 1rem 0; /* Adjusted spacing */
+    text-align: center; /* Center all text */
+    padding: 5px 0;
+}
+
+.price-note {
+    font-size: 0.8rem; /* Reduced from 0.9rem */
+    margin-top: 1.2rem;
+    color: #2D3194;
+    opacity: 0.8;
+}
+
+.custom-item {
+    margin-bottom: 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .text-content h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .text-content {
+        padding: 2rem 1rem; /* Reduced padding */
+    }
+
+    .image-content {
+        min-height: 400px; /* Adjusted for mobile */
+    }
+
+    .pricing-grid {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .pricing-column {
+        padding: 0 20px; /* Adjusted padding */
+        width: 100%;
+        text-align: center;
+    }
+
+    .pricing-diagram {
+        width: 100%;
+        padding: 20px; /* Adjusted padding */
+        order: -1;
+    }
+
+    .pricing-diagram img {
+        max-width: 85%; /* Adjusted max width */
+    }
+
+    .pricing-column h3 {
+        font-size: 2.4rem; /* Reduced from 2.8rem */
+        text-align: center;
+    }
+
+    .price-list p,
+    .customization-list p {
+        font-size: 1.4rem; /* Reduced from 1.5rem */
+        text-align: center;
+    }
+
+    .pricing-section h2 {
+        font-size: 50px; /* Reduced from 65px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-content h1 {
+        font-size: 2.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .pricing-grid {
+        padding: 10px;
+    }
+
+    .pricing-section h2 {
+        font-size: 35px; /* Reduced from 50px */
+    }
+
+    .pricing-column h3 {
+        font-size: 2rem; /* Reduced from 2.4rem */
+    }
+
+    .price-list p,
+    .customization-list p {
+        font-size: 1.2rem; /* Reduced from 1.4rem */
+    }
+
+    .pricing-diagram img {
+        max-width: 90%;
+    }
+}

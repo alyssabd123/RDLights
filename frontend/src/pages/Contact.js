@@ -1,9 +1,35 @@
 // Contact.js
-import React from 'react';
 import './Contact.css'; // Import the CSS file
 import emailjs from '@emailjs/browser';
+import React, { useState, useEffect } from 'react';
+
 
 const Contact = () => {
+    const [descriptions, setDescriptions] = useState({});
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const fetchDescriptions = async () => {
+            try {
+                const response = await fetch('/api/descriptions');
+                const data = await response.json();
+                if (response.ok) {
+                    const descriptionsByName = data.reduce((acc, desc) => {
+                        acc[desc.name] = desc.description;
+                        return acc;
+                    }, {});
+                    setDescriptions(descriptionsByName);
+                } else {
+                    setError('Failed to fetch descriptions');
+                }
+            } catch (error) {
+                setError('Error fetching descriptions');
+            }
+        };
+
+        fetchDescriptions();
+    }, []);
+
     const sendEmail = (e) => {
         e.preventDefault();
         alert('Email Submitted');
@@ -14,7 +40,7 @@ const Contact = () => {
         <div className="contact-container">
             <div className="header-container">
                 <h1>Contact Us</h1>
-                <p>Contact us description goes right here</p>
+                <p>{descriptions["contact-us-instructions"]}</p>
             </div>
             <div className="form-container">
                 <form onSubmit={sendEmail}>

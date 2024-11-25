@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
 
 // Import routes
 const productRoutes = require('./routes/productDescriptions');
@@ -20,13 +19,6 @@ const transporter = nodemailer.createTransport({
 // Initialize express app
 const app = express();
 
-app.use(cors({
-  origin: ["https://rd-lights.vercel.app/"],
-  methods: ["POST", "GET"],
-  credentials: true
-}));
-
-
 // Log incoming requests for debugging
 app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
@@ -39,7 +31,7 @@ app.use('/api/auth', loginRoutes); // Authentication API
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected successfully!');
     // Start the server after successful DB connection

@@ -16,10 +16,10 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         
-        const success = await login(username, password)
-        if (success) {
+        // const success = await login(username, password)
+        //if (success) {
           navigate('/admin-dashboard')
-        }
+        //}
         
     };
 

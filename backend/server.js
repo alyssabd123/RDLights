@@ -1,20 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const nodemailer = require('nodemailer');
 
 // Import routes
 const productRoutes = require('./routes/productDescriptions');
 const loginRoutes = require('./routes/adminLogin');
-
-// Configure nodemailer transporter
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
 
 // Initialize express app
 const app = express();

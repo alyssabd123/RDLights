@@ -24,6 +24,7 @@ const EditDescriptions = () => {
                 const data = await response.json();
 
                 if (response.ok) {
+                    const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
                     setDescriptions(data); // Populate descriptions state
                 } else {
                     setErrorMessage("Failed to fetch descriptions");

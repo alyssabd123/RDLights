@@ -18,6 +18,7 @@ const transporter = nodemailer.createTransport({
 
 // Initialize express app
 const app = express();
+app.use(express.json()); // Parses JSON bodies
 
 // Log incoming requests for debugging
 app.use((req, res, next) => {

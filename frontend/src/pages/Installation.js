@@ -58,7 +58,7 @@ import React, { useState, useEffect } from 'react';
             <div className='installationBottom'>
                 <h1>Pricing and Delivery</h1>
                 <h2>How it Works:</h2>
-                <p>{descriptions['installation-pricing']}</p>
+                <p>{renderBullets(descriptions['installation-pricing'])}</p>
             </div>
         </div>
     )

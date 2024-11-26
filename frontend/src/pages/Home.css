@@ -121,8 +121,8 @@ html, body {
 
 .Rcontent-section h2 {
     color: #2D3194;
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1.7rem;
+    line-height: 3;
     max-width: 800px;
 }
 
@@ -183,7 +183,7 @@ html, body {
 .Lcontent-section2 h1 {
     font-size: 1.75rem;
     color: #2D3194;
-    line-height: 1.6;
+    line-height: 2;
     max-width: 800px;
 }
 

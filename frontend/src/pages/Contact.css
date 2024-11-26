@@ -12,9 +12,10 @@
 /* Header styling */
 .header-container {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
+    margin-left: 10rem;
 }
 
 .header-container h1 {
@@ -26,6 +27,7 @@
 .header-container p {
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: #333;
+    line-height: 3rem;
 }
 
 /* Form container */

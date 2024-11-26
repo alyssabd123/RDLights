@@ -29,7 +29,7 @@ ul {
     text-align: left;
     padding-left: min(100px, 5%);
     padding-right: 25px;
-    line-height: 1.6;
+    line-height: 2;
     width: auto;
     max-width: 90%;
     margin: 0 auto;
@@ -62,7 +62,7 @@ ul {
     text-align: left;
     padding-left: min(100px, 5%);
     padding-right: min(80px, 5%);
-    line-height: 1.6;
+    line-height: 2;
     width: auto;
     max-width: 90%;
     margin: 0 auto;

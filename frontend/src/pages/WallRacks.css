@@ -121,34 +121,20 @@
 /* Adjust text sizes */
 .left h1,
 .right h1 {
-<<<<<<< HEAD
-    font-size: 3.8rem; /* Reduced from 5rem */
-=======
     font-size: 4rem; /* Reduced from 5rem */
->>>>>>> ab84722545bc2b7bfa1275d92be162cc4efe38ee
     color: #2D3194;
     margin-bottom: 2rem; /* Reduced from 3rem */
     text-align: left;
 }
 
-<<<<<<< HEAD
-.left p {
-    font-size: 2.2rem; /* Reduced from 2.5rem */
-    line-height: 5rem; /* Reduced from 2 */
-=======
 .left p{
     font-size: 2.3rem; /* Reduced from 2.5rem */
     line-height: 2.5; /* Reduced from 2 */
->>>>>>> ab84722545bc2b7bfa1275d92be162cc4efe38ee
     color: #2D3194;
     margin: 1rem 0; /* Reduced from 1.5rem */
     text-align: left;
     padding: 5px 0;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ab84722545bc2b7bfa1275d92be162cc4efe38ee
 .right p {
     font-size: 1.8rem; /* Reduced from 2.5rem */
     line-height: 1.8; /* Reduced from 2 */

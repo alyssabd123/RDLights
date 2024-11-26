@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 
 // Import routes
@@ -9,6 +10,9 @@ const loginRoutes = require('./routes/adminLogin');
 // Initialize express app
 const app = express();
 app.use(express.json()); // Parses JSON bodies
+
+// Use CORS to allow cross-origin requests
+app.use(cors());  // This allows any origin to access your backend
 
 // Log incoming requests for debugging
 app.use((req, res, next) => {
@@ -34,6 +38,7 @@ mongoose
   .catch((error) => {
     console.error('❌ MongoDB connection failed:', error.message);
   });
+
 
   // Export the app to use with Vercel's serverless function
   module.exports = app;

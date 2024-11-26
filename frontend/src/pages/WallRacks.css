@@ -49,7 +49,7 @@
 
 .racksRight p {
     font-size: 2rem;
-    line-height: 1.6;
+    line-height: 706;
 }
 
 .racksRight button {
@@ -121,13 +121,21 @@
 /* Adjust text sizes */
 .left h1,
 .right h1 {
-    font-size: 3.5rem; /* Reduced from 5rem */
+    font-size: 3.8rem; /* Reduced from 5rem */
     color: #2D3194;
     margin-bottom: 2rem; /* Reduced from 3rem */
     text-align: left;
 }
 
-.left p,
+.left p {
+    font-size: 2.2rem; /* Reduced from 2.5rem */
+    line-height: 5rem; /* Reduced from 2 */
+    color: #2D3194;
+    margin: 1rem 0; /* Reduced from 1.5rem */
+    text-align: left;
+    padding: 5px 0;
+}
+
 .right p {
     font-size: 1.8rem; /* Reduced from 2.5rem */
     line-height: 1.8; /* Reduced from 2 */

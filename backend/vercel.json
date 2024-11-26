@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "functions": {
+      "server.js": {
+        "runtime": "nodejs14.x"
+      }
+    },
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "server.js"
+      }
+    ]
+  }
+  

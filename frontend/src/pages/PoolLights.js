@@ -34,9 +34,7 @@ const PoolLights = () => {
                 <div className='content-container'>
                     <div className='text-content'>
                         <h1>Pool Lights</h1>
-                        <p>Our lights are made to order in a size and color to match your room and table. 
-                            Additional customization options - such as suede-wrapping, and adding logos 
-                            or designs - are available at an additional price, based on the materials and work required.
+                        <p>{descriptions["pool-lights-description"]}
                         </p>
                     </div>
                     <div className='image-content'></div>

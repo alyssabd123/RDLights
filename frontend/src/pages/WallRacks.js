@@ -58,11 +58,7 @@ const WallRacks = () => {
                 <div className='racksRight'>
                     <h1>Wall Racks</h1>
                     {isMobile && <div className='racksLeft mobile-image' />}
-                    <p>
-                        Hand carved cue racks are available in sizes of 4 to 8 pool cues,
-                        and can come in any color. The racks can be expanded to include
-                        a billiard ball holder for an extra $75.
-                    </p>
+                    <p>{descriptions['wall-racks-description']}</p>
                     <button className="button arrow-button" onClick={scrollToVisual}></button>
                 </div>
             </div>

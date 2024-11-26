@@ -22,6 +22,7 @@ const WallRacks = () => {
             try {
                 const response = await fetch('/api/descriptions');
                 const data = await response.json();
+                console.log(data);
                 if (response.ok) {
                     const descriptionsByName = data.reduce((acc, desc) => {
                         acc[desc.name] = desc.description;

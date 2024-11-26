@@ -86,7 +86,7 @@
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 935px) {
     .navbar {
         padding: 1rem;
     }
@@ -107,7 +107,7 @@
         transform-origin: top;
         transition: transform 0.3s ease;
         opacity: 0;
-        z-index: 1001; /* Added to ensure it appears above other elements */
+        z-index: 1001;
     }
 
     .navbar-links.active {
@@ -131,6 +131,7 @@
     .contact-button {
         position: static;
         margin-left: 1rem;
+        display: inline-block;
     }
 }
 

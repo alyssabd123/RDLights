@@ -34,8 +34,7 @@ const PoolLights = () => {
                 <div className='content-container'>
                     <div className='text-content'>
                         <h1>Pool Lights</h1>
-                        <p>{descriptions["pool-lights-description"]}
-                        </p>
+                        <p>{descriptions["pool-lights-description"]}</p>
                     </div>
                     <div className='image-content'></div>
                 </div>

@@ -57,6 +57,7 @@
 /* Pricing Section */
 .pricing-section {
     padding: 0; /* Remove default padding */
+    padding-top: 50px; /* Add space above the pricing section */
 }
 
 .pricing-section h2 {
@@ -71,36 +72,29 @@
 
 .pricing-grid {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 30px 160px; /* Increased outer padding */
-    background-color: white;
-    min-height: 500px; /* Reduced from 600px */
-    margin-top: 30px; /* Reduced from 40px */
-    max-width: none; /* Remove max-width constraint */
+    flex-direction: column; /* Default to column layout */
+    align-items: center;
+    padding: 20px;
 }
 
 .pricing-column {
-    flex: 1; /* Changed from 0.8 */
-    width: 25%; /* Increased from 20% */
-    padding: 0 40px; /* Added padding to center content within columns */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .pricing-diagram {
-    flex: 1.2; /* Reduced from 1.4 */
-    width: 50%; /* Reduced from 60% */
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the diagram */
     align-items: center;
-    padding: 0 20px; /* Reduced padding */
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
 .pricing-diagram img {
-    width: 100%;
-    max-width: 500px; /* Reduced from 600px */
-    height: auto;
-    object-fit: contain;
-    margin: 30px auto; /* Center the image */
+    max-width: 85%;
+    margin-bottom: 50px;
 }
 
 .pricing-column h3 {
@@ -167,15 +161,20 @@
     }
 
     .pricing-column {
-        padding: 0 20px; /* Adjusted padding */
+        order: 1;
+        padding: 0 20px;
         width: 100%;
         text-align: center;
     }
 
     .pricing-diagram {
+        order: 2;
         width: 100%;
-        padding: 20px; /* Adjusted padding */
-        order: -1;
+        padding: 20px;
+    }
+
+    .pricing-column:last-child {
+        order: 3;
     }
 
     .pricing-diagram img {
@@ -227,5 +226,19 @@
 
     .pricing-diagram img {
         max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .pricing-grid {
+        flex-direction: column; /* Keep column layout for larger screens */
+    }
+
+    .pricing-column {
+        width: 100%; /* Full width for stacking */
+    }
+
+    .pricing-diagram {
+        width: 100%; /* Full width for stacking */
     }
 }

@@ -1,14 +1,14 @@
 {
     "version": 2,
     "functions": {
-      "server.js": {
+      "backend/server.js": {
         "runtime": "nodejs16.x"
       }
     },
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "server.js"
+        "dest": "backend/server.js"
       }
     ]
   }

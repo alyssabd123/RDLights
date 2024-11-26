@@ -34,3 +34,6 @@ mongoose
   .catch((error) => {
     console.error('❌ MongoDB connection failed:', error.message);
   });
+
+  // Export the app to use with Vercel's serverless function
+  module.exports = app;

@@ -104,7 +104,7 @@
 }
 
 .pricing-column h3 {
-    font-size: 2.8rem; /* Reduced from 3.5rem */
+    font-size: 3.5rem; /* Reduced from 3.5rem */
     color: #2D3194;
     margin-bottom: 2rem; /* Adjusted spacing */
     text-align: center; /* Center titles */
@@ -112,10 +112,17 @@
     font-weight: bold;
 }
 
-.price-list p,
+.price-list p{
+    font-size: 2rem; /* Reduced from 1.8rem */
+    line-height: 5rem;
+    color: #2D3194;
+    margin: 1rem 0; /* Adjusted spacing */
+    text-align: center; /* Center all text */
+    padding: 5px 0;
+}
 .customization-list p {
-    font-size: 1.5rem; /* Reduced from 1.8rem */
-    line-height: 1.6;
+    font-size: 2rem; /* Reduced from 1.8rem */
+    line-height: 2.7rem;
     color: #2D3194;
     margin: 1rem 0; /* Adjusted spacing */
     text-align: center; /* Center all text */

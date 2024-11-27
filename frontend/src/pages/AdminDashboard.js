@@ -144,6 +144,9 @@ const EditDescriptions = () => {
                     <button type="submit" className="w3-button w3-blue">
                         Update
                     </button>
+                    <button type="button" className="w3-button w3-yellow" onClick={() => window.open("https://analytics.google.com/analytics/web/?authuser=1#/p468329622/reports/intelligenthome","_blank")}>
+                        Website Google Analytics
+                    </button>
 
                     {/* Notifications */}
                     <div>

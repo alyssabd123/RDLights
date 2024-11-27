@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <header className="navbar">
-            <Link to="/admin-login" className="logo-link">
+            <Link to="/" className="logo-link">
                 <img src={logo} alt="RD Lights Logo" />
             </Link>
             

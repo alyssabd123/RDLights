@@ -12,26 +12,26 @@ const PoolLights = () => {
       : ''; // Empty string uses the proxy during local development
 
     useEffect(() => {
-        const fetchDescriptions = async () => {
-            try {
-                const response = await fetch(`${API_BASE_URL}/api/descriptions}`);
-                const data = await response.json();
-                if (response.ok) {
-                    const descriptionsByName = data.reduce((acc, desc) => {
-                        acc[desc.name] = desc.description;
-                        return acc;
-                    }, {});
-                    setDescriptions(descriptionsByName);
-                } else {
-                    setError('Failed to fetch descriptions');
-                }
-            } catch (error) {
-                setError('Error fetching descriptions');
+      const fetchDescriptions = async () => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/descriptions`);
+            const data = await response.json();
+            if (response.ok) {
+                const descriptionsByName = data.reduce((acc, desc) => {
+                    acc[desc.name] = desc.description;
+                    return acc;
+                }, {});
+                setDescriptions(descriptionsByName);
+            } else {
+                setError('Failed to fetch descriptions');
             }
-        };
+        } catch (error) {
+            setError('Error fetching descriptions');
+        }
+    };
 
-        fetchDescriptions();
-    }, []);
+    fetchDescriptions();
+}, []);
 
     return(
         <div className='pool-lights-page'>

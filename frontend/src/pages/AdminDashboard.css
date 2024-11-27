@@ -41,6 +41,12 @@
     margin-top: 20px;
 }
 
+.w3-button.w3-yellow {
+    position: absolute; /* Allows precise positioning */
+    right: 24.5rem; /* Distance from the right edge of the box */
+}
+
+
 .w3-border {
     width: 100%; /* Maintain full width */
     padding: 10px; /* Padding for better readability */

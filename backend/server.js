@@ -10,19 +10,13 @@ const loginRoutes = require('./routes/adminLogin');
 // Initialize express app
 const app = express();
 app.use(express.json()); // Parses JSON bodies
+app.use(cors()); // Allow cross-origin requests
 
-// Use CORS to allow cross-origin requests
-app.use(cors());  // This allows any origin to access your backend
 
-// Log incoming requests for debugging
-app.use((req, res, next) => {
-  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
-  next();
-});
-
-// Routes
+// API Routes
 app.use('/api/descriptions', productRoutes); // Product descriptions API
 app.use('/api/auth', loginRoutes); // Authentication API
+
 
 // Connect to MongoDB
 mongoose
@@ -40,5 +34,5 @@ mongoose
   });
 
 
-  // Export the app to use with Vercel's serverless function
-  module.exports = app;
+  // Export the app for Vercel
+  module.exports = (req, res) => app(req, res);

@@ -16,13 +16,19 @@ const WallRacks = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    
+    const API_BASE_URL =
+    process.env.NODE_ENV === 'production'
+      ? process.env.REACT_APP_API_BASE_URL // Deployed backend URL
+      : ''; // Empty string uses the proxy during local development
+    
+
     // Fetch descriptions from API
     useEffect(() => {
         const fetchDescriptions = async () => {
             try {
-                const response = await fetch('/api/descriptions');
+                const response = await fetch(`${API_BASE_URL}/api/descriptions`);
                 const data = await response.json();
-                console.log(data);
                 if (response.ok) {
                     const descriptionsByName = data.reduce((acc, desc) => {
                         acc[desc.name] = desc.description;

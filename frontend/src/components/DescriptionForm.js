@@ -6,11 +6,18 @@ const DescriptionForm = ({ descriptionId }) => {
     const [error, setError] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
+
+    const API_BASE_URL =
+    process.env.NODE_ENV === 'production'
+      ? process.env.REACT_APP_API_BASE_URL // Deployed backend URL
+      : ''; // Empty string uses the proxy during local development
+    
+
     // Fetch the current description when the component loads
     useEffect(() => {
         const fetchDescription = async () => {
             try {
-                const response = await fetch(`/api/products/${descriptionId}`);
+                const response = await fetch(`${API_BASE_URL}/api/products/${descriptionId}`);
                 const data = await response.json();
 
                 if (response.ok) {

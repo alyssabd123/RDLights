@@ -13,14 +13,23 @@ const EditDescriptions = () => {
 
     const navigate = useNavigate();
 
+
+    const API_BASE_URL =
+    process.env.NODE_ENV === 'production'
+      ? process.env.REACT_APP_API_BASE_URL // Deployed backend URL
+      : ''; // Empty string uses the proxy during local development
+
+
     // Navigate back to the home page
     const handleBackClick = () => navigate("/");
-
+    
+    
+    
     // Fetch all descriptions on component mount
     useEffect(() => {
         const fetchDescriptions = async () => {
             try {
-                const response = await fetch("/api/descriptions");
+                const response = await fetch(`${API_BASE_URL}/api/descriptions`);
                 const data = await response.json();
 
                 if (response.ok) {
@@ -44,7 +53,7 @@ const EditDescriptions = () => {
 
         try {
             const response = await fetch(
-                `/api/descriptions/${selected}`
+                `${API_BASE_URL}/api/descriptions/${selected}`
             );
             const data = await response.json();
 
@@ -72,7 +81,7 @@ const EditDescriptions = () => {
 
         try {
             const response = await fetch(
-                `/api/descriptions/${selectedOption}`,
+                `${API_BASE_URL}/api/descriptions/${selectedOption}`,
                 {
                     method: "PATCH",
                     headers: { "Content-Type": "application/json" },

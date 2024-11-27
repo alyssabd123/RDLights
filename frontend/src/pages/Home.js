@@ -1,8 +1,4 @@
 // Home.jsx 
-////who are you????who do you think loser youre scaring me
-//ur mom is the loser
-//8========>~~~ O:     (alans moms mouth) // this hurts me.. my mom isnt here anymore//it hurts your moms mouth!!!!
-//LMAOOOOOOO
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 // Import images with correct path

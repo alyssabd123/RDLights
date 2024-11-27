@@ -1,26 +1,4 @@
 {
-    "projects": {
-      "frontend": {
-        "root": "frontend",
-        "buildCommand": "npm install && npm run build",
-        "outputDirectory": "frontend/build"
-      },
-      "backend": {
-        "root": "backend",
-        "buildCommand": "npm install",
-        "outputDirectory": "backend"
-      }
-    },
-    "functions": {
-      "backend/server.js": {
-        "runtime": "nodejs16.x"
-      }
-    },
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "backend/server.js"
-      }
-    ]
+    "version": 2
   }
   

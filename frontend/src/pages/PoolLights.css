@@ -8,21 +8,21 @@
 /* Hero Section */
 .hero-section {
     width: 100%;
-    min-height: fit-content; /* Changed from 100vh */
+    min-height: fit-content;
     position: relative;
 }
 
 .content-container {
     display: flex;
     width: 100%;
-    min-height: fit-content; /* Changed from 100vh */
+    min-height: fit-content;
 }
 
 .text-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Changed from center */
+    justify-content: flex-start;
     align-items: center;
     padding: 2rem;
     text-align: center;
@@ -42,7 +42,7 @@
     color: #2D3194;
     max-width: 800px;
     line-height: 1.6;
-    margin-bottom: 2rem; /* Added margin bottom */
+    margin-bottom: 2rem;
 }
 
 .image-content {
@@ -51,45 +51,37 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 600px; /* Added fixed minimum height */
+    min-height: 600px;
 }
 
 /* Pricing Section */
 .pricing-section {
-    padding: 0; /* Remove default padding */
-    padding-top: 50px; /* Add space above the pricing section */
+    padding: 0;
+    padding-top: 50px;
 }
 
 .pricing-section h2 {
-    font-size: 95px; /* Reduced from 80px */
+    font-size: 95px;
     color: #2D3194;
     text-align: center;
     background-color: #FFD401;
-    padding: 15px 0; /* Reduced from 20px */
+    padding: 15px 0;
     margin: 0;
     width: 100%;
 }
 
+/* Default layout: Vertical (for mobile and tablet, including iPads) */
 .pricing-grid {
     display: flex;
-    flex-direction: column; /* Default to column layout */
+    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
 
-.pricing-column {
+.pricing-column, .pricing-diagram {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-}
-
-.pricing-diagram {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Center the diagram */
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 50px;
 }
 
 .pricing-diagram img {
@@ -98,33 +90,34 @@
 }
 
 .pricing-column h3 {
-    font-size: 3.5rem; /* Reduced from 3.5rem */
+    font-size: 3.5rem;
     color: #2D3194;
-    margin-bottom: 2rem; /* Adjusted spacing */
-    text-align: center; /* Center titles */
+    margin-bottom: 2rem;
+    text-align: center;
     font-family: serif;
     font-weight: bold;
 }
 
-.price-list p{
-    font-size: 2.5rem; /* Reduced from 1.8rem */
+.price-list p {
+    font-size: 2.5rem;
     line-height: 5rem;
     color: #2D3194;
-    margin: 1rem 0; /* Adjusted spacing */
-    text-align: center; /* Center all text */
+    margin: 1rem 0;
+    text-align: center;
     padding: 5px 0;
 }
+
 .customization-list p {
-    font-size: 2rem; /* Reduced from 1.8rem */
+    font-size: 2rem;
     line-height: 2.7rem;
     color: #2D3194;
-    margin: 1rem 0; /* Adjusted spacing */
-    text-align: center; /* Center all text */
+    margin: 1rem 0;
+    text-align: center;
     padding: 5px 0;
 }
 
 .price-note {
-    font-size: 0.8rem; /* Reduced from 0.9rem */
+    font-size: 0.8rem;
     margin-top: 1.2rem;
     color: #2D3194;
     opacity: 0.8;
@@ -135,68 +128,60 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 1200px) {
-    .text-content h1 {
-        font-size: 4rem;
+
+/* For screens wider than 1024px (desktop screens) */
+@media screen and (min-width: 1025px) {
+    .pricing-grid {
+        flex-direction: row; /* Horizontal layout on desktop */
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .pricing-column, .pricing-diagram {
+        flex: 1;
+        width: 30%; /* Adjust width as needed */
+        margin: 0 10px; /* Space between columns */
+        margin-bottom: 0; /* Remove margin-bottom for horizontal layout */
     }
 }
 
-@media screen and (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .text-content {
-        padding: 2rem 1rem; /* Reduced padding */
-    }
-
-    .image-content {
-        min-height: 400px; /* Adjusted for mobile */
-    }
-
+/* Adjustments for medium screens (e.g., tablets in landscape) */
+@media screen and (max-width: 1024px) {
     .pricing-grid {
-        flex-direction: column;
         padding: 20px;
     }
 
-    .pricing-column {
-        order: 1;
-        padding: 0 20px;
+    .pricing-column, .pricing-diagram {
         width: 100%;
-        text-align: center;
-    }
-
-    .pricing-diagram {
-        order: 2;
-        width: 100%;
-        padding: 20px;
-    }
-
-    .pricing-column:last-child {
-        order: 3;
+        margin: 0;
     }
 
     .pricing-diagram img {
-        max-width: 85%; /* Adjusted max width */
+        max-width: 85%;
     }
+}
 
-    .pricing-column h3 {
-        font-size: 2.4rem; /* Reduced from 2.8rem */
-        text-align: center;
+/* Adjustments for small screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+    .text-content h1 {
+        font-size: 4rem;
     }
 
     .price-list p,
     .customization-list p {
-        font-size: 1.4rem; /* Reduced from 1.5rem */
-        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .pricing-column h3 {
+        font-size: 2.8rem;
     }
 
     .pricing-section h2 {
-        font-size: 50px; /* Reduced from 65px */
+        font-size: 65px;
     }
 }
 
+/* Adjustments for very small screens */
 @media screen and (max-width: 480px) {
     .text-content h1 {
         font-size: 2.5rem;
@@ -212,16 +197,16 @@
     }
 
     .pricing-section h2 {
-        font-size: 35px; /* Reduced from 50px */
+        font-size: 35px;
     }
 
     .pricing-column h3 {
-        font-size: 2rem; /* Reduced from 2.4rem */
+        font-size: 2rem;
     }
 
     .price-list p,
     .customization-list p {
-        font-size: 1.2rem; /* Reduced from 1.4rem */
+        font-size: 1.2rem;
     }
 
     .pricing-diagram img {
@@ -229,16 +214,5 @@
     }
 }
 
-@media screen and (min-width: 769px) {
-    .pricing-grid {
-        flex-direction: column; /* Keep column layout for larger screens */
-    }
-
-    .pricing-column {
-        width: 100%; /* Full width for stacking */
-    }
-
-    .pricing-diagram {
-        width: 100%; /* Full width for stacking */
-    }
-}
+/* Removed the conflicting media query to fix layout issues */
+/* The conflicting media query was causing the pricing grid to stack vertically on desktops and has been removed. */

@@ -2,10 +2,6 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/server.js"
-    },
-    {
       "src": "/(.*)",
       "dest": "frontend/$1"
     }
